@@ -41,16 +41,16 @@ namespace oudaAssignment2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  gameStartButton;
+	private: System::Windows::Forms::Button^ gameStartButton;
 	protected:
-	private: System::Windows::Forms::Button^  leaderBoardButton;
-	private: System::Windows::Forms::Button^  exitButton;
+	private: System::Windows::Forms::Button^ leaderBoardButton;
+	private: System::Windows::Forms::Button^ exitButton;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -59,7 +59,7 @@ namespace oudaAssignment2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(oudaStart::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(oudaStart::typeid));
 			this->gameStartButton = (gcnew System::Windows::Forms::Button());
 			this->leaderBoardButton = (gcnew System::Windows::Forms::Button());
 			this->exitButton = (gcnew System::Windows::Forms::Button());
@@ -118,45 +118,45 @@ namespace oudaAssignment2 {
 #pragma endregion
 
 
-	
 
-	private: System::Void gameStartButton_Click(System::Object^  sender, System::EventArgs^  e) {
 
-		chessBoard ^ form = gcnew chessBoard;
+	private: System::Void gameStartButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		chessBoard^ form = gcnew chessBoard;
 		try {
 			form->ShowDialog();
 		}
-		catch (Exception ^ e)
-		{
-			// do nothing
-		}
-
-		
-
-	}
-
-
-	private: System::Void leaderBoardButton_Click(System::Object^  sender, System::EventArgs^  e) {
-
-		leaderBoard ^ form = gcnew leaderBoard;
-		try {
-			form->ShowDialog();
-		}
-		catch (Exception ^ e)
+		catch (Exception^ e)
 		{
 			// do nothing
 		}
 
 
 
+	}
+
+
+	private: System::Void leaderBoardButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		leaderBoard^ form = gcnew leaderBoard;
+		try {
+			form->ShowDialog();
+		}
+		catch (Exception^ e)
+		{
+			// do nothing
+		}
+
+
+
 
 	}
-private: System::Void exitButton_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void exitButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->Close();
+		this->Close();
 
-}
+	}
 
 
-};
+	};
 }

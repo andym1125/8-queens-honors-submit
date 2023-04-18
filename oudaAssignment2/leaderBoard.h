@@ -34,81 +34,81 @@ namespace oudaAssignment2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  date10Label;
+	private: System::Windows::Forms::Label^ date10Label;
 	protected:
-	private: System::Windows::Forms::Label^  date9Label;
-	private: System::Windows::Forms::Label^  date8Label;
-	private: System::Windows::Forms::Label^  date7Label;
-	private: System::Windows::Forms::Label^  date6Label;
-	private: System::Windows::Forms::Label^  date5Label;
-	private: System::Windows::Forms::Label^  date4Label;
-	private: System::Windows::Forms::Label^  date3Label;
-	private: System::Windows::Forms::Label^  date2Label;
-	private: System::Windows::Forms::Label^  date1Label;
-	private: System::Windows::Forms::Label^  dateLabel;
-	private: System::Windows::Forms::Label^  score10Label;
-	private: System::Windows::Forms::Label^  score9Label;
-	private: System::Windows::Forms::Label^  score8Label;
-	private: System::Windows::Forms::Label^  score7Label;
-	private: System::Windows::Forms::Label^  score6Label;
-	private: System::Windows::Forms::Label^  score5Label;
-	private: System::Windows::Forms::Label^  score4Label;
-	private: System::Windows::Forms::Label^  score3Label;
-	private: System::Windows::Forms::Label^  score2Label;
-	private: System::Windows::Forms::Label^  score1Label;
-	private: System::Windows::Forms::Label^  time10Label;
-	private: System::Windows::Forms::Label^  time9Label;
-	private: System::Windows::Forms::Label^  time8Label;
-	private: System::Windows::Forms::Label^  time7Label;
-	private: System::Windows::Forms::Label^  time6Label;
-	private: System::Windows::Forms::Label^  time5Label;
-	private: System::Windows::Forms::Label^  time4Label;
-	private: System::Windows::Forms::Label^  time3Label;
-	private: System::Windows::Forms::Label^  time2Label;
-	private: System::Windows::Forms::Label^  time1Label;
-	private: System::Windows::Forms::Label^  noOfQueens10Label;
-	private: System::Windows::Forms::Label^  noOfQueens9Label;
-	private: System::Windows::Forms::Label^  noOfQueens8Label;
-	private: System::Windows::Forms::Label^  noOfQueens7Label;
-	private: System::Windows::Forms::Label^  noOfQueens6Label;
-	private: System::Windows::Forms::Label^  noOfQueens5Label;
-	private: System::Windows::Forms::Label^  noOfQueens4Label;
-	private: System::Windows::Forms::Label^  noOfQueens3Label;
-	private: System::Windows::Forms::Label^  noOfQueens2Label;
-	private: System::Windows::Forms::Label^  noOfQueens1Label;
-	private: System::Windows::Forms::Label^  name10Label;
-	private: System::Windows::Forms::Label^  name9Label;
-	private: System::Windows::Forms::Label^  name8Label;
-	private: System::Windows::Forms::Label^  name7Label;
-	private: System::Windows::Forms::Label^  name6Label;
-	private: System::Windows::Forms::Label^  name5Label;
-	private: System::Windows::Forms::Label^  name4Label;
-	private: System::Windows::Forms::Label^  name3Label;
-	private: System::Windows::Forms::Label^  name2Label;
-	private: System::Windows::Forms::Label^  name1Label;
-	private: System::Windows::Forms::Label^  num10Label;
-	private: System::Windows::Forms::Label^  num9Label;
-	private: System::Windows::Forms::Label^  num8Label;
-	private: System::Windows::Forms::Label^  num7Label;
-	private: System::Windows::Forms::Label^  num6Label;
-	private: System::Windows::Forms::Label^  num5Label;
-	private: System::Windows::Forms::Label^  num4Label;
-	private: System::Windows::Forms::Label^  num3Label;
-	private: System::Windows::Forms::Label^  num2Label;
-	private: System::Windows::Forms::Label^  num1Label;
-	private: System::Windows::Forms::Label^  timeLabel;
-	private: System::Windows::Forms::Label^  scoreLabel;
-	private: System::Windows::Forms::Label^  difficultyLabel;
-	private: System::Windows::Forms::Label^  nameLabel;
-	private: System::Windows::Forms::Button^  closeButton;
-	private: System::Windows::Forms::Label^  posLabel;
-	private: System::Windows::Forms::Label^  headerLabel;
+	private: System::Windows::Forms::Label^ date9Label;
+	private: System::Windows::Forms::Label^ date8Label;
+	private: System::Windows::Forms::Label^ date7Label;
+	private: System::Windows::Forms::Label^ date6Label;
+	private: System::Windows::Forms::Label^ date5Label;
+	private: System::Windows::Forms::Label^ date4Label;
+	private: System::Windows::Forms::Label^ date3Label;
+	private: System::Windows::Forms::Label^ date2Label;
+	private: System::Windows::Forms::Label^ date1Label;
+	private: System::Windows::Forms::Label^ dateLabel;
+	private: System::Windows::Forms::Label^ score10Label;
+	private: System::Windows::Forms::Label^ score9Label;
+	private: System::Windows::Forms::Label^ score8Label;
+	private: System::Windows::Forms::Label^ score7Label;
+	private: System::Windows::Forms::Label^ score6Label;
+	private: System::Windows::Forms::Label^ score5Label;
+	private: System::Windows::Forms::Label^ score4Label;
+	private: System::Windows::Forms::Label^ score3Label;
+	private: System::Windows::Forms::Label^ score2Label;
+	private: System::Windows::Forms::Label^ score1Label;
+	private: System::Windows::Forms::Label^ time10Label;
+	private: System::Windows::Forms::Label^ time9Label;
+	private: System::Windows::Forms::Label^ time8Label;
+	private: System::Windows::Forms::Label^ time7Label;
+	private: System::Windows::Forms::Label^ time6Label;
+	private: System::Windows::Forms::Label^ time5Label;
+	private: System::Windows::Forms::Label^ time4Label;
+	private: System::Windows::Forms::Label^ time3Label;
+	private: System::Windows::Forms::Label^ time2Label;
+	private: System::Windows::Forms::Label^ time1Label;
+	private: System::Windows::Forms::Label^ noOfQueens10Label;
+	private: System::Windows::Forms::Label^ noOfQueens9Label;
+	private: System::Windows::Forms::Label^ noOfQueens8Label;
+	private: System::Windows::Forms::Label^ noOfQueens7Label;
+	private: System::Windows::Forms::Label^ noOfQueens6Label;
+	private: System::Windows::Forms::Label^ noOfQueens5Label;
+	private: System::Windows::Forms::Label^ noOfQueens4Label;
+	private: System::Windows::Forms::Label^ noOfQueens3Label;
+	private: System::Windows::Forms::Label^ noOfQueens2Label;
+	private: System::Windows::Forms::Label^ noOfQueens1Label;
+	private: System::Windows::Forms::Label^ name10Label;
+	private: System::Windows::Forms::Label^ name9Label;
+	private: System::Windows::Forms::Label^ name8Label;
+	private: System::Windows::Forms::Label^ name7Label;
+	private: System::Windows::Forms::Label^ name6Label;
+	private: System::Windows::Forms::Label^ name5Label;
+	private: System::Windows::Forms::Label^ name4Label;
+	private: System::Windows::Forms::Label^ name3Label;
+	private: System::Windows::Forms::Label^ name2Label;
+	private: System::Windows::Forms::Label^ name1Label;
+	private: System::Windows::Forms::Label^ num10Label;
+	private: System::Windows::Forms::Label^ num9Label;
+	private: System::Windows::Forms::Label^ num8Label;
+	private: System::Windows::Forms::Label^ num7Label;
+	private: System::Windows::Forms::Label^ num6Label;
+	private: System::Windows::Forms::Label^ num5Label;
+	private: System::Windows::Forms::Label^ num4Label;
+	private: System::Windows::Forms::Label^ num3Label;
+	private: System::Windows::Forms::Label^ num2Label;
+	private: System::Windows::Forms::Label^ num1Label;
+	private: System::Windows::Forms::Label^ timeLabel;
+	private: System::Windows::Forms::Label^ scoreLabel;
+	private: System::Windows::Forms::Label^ difficultyLabel;
+	private: System::Windows::Forms::Label^ nameLabel;
+	private: System::Windows::Forms::Button^ closeButton;
+	private: System::Windows::Forms::Label^ posLabel;
+	private: System::Windows::Forms::Label^ headerLabel;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -117,7 +117,7 @@ namespace oudaAssignment2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(leaderBoard::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(leaderBoard::typeid));
 			this->date10Label = (gcnew System::Windows::Forms::Label());
 			this->date9Label = (gcnew System::Windows::Forms::Label());
 			this->date8Label = (gcnew System::Windows::Forms::Label());
@@ -884,10 +884,10 @@ namespace oudaAssignment2 {
 
 		}
 #pragma endregion
-	private: System::Void closeButton_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void closeButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Close();
 
 	}
-};
+	};
 }
