@@ -1,7 +1,9 @@
 #pragma once
+#include <optional>
+#include <optional>
+
 
 namespace oudaAssignment2 {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -46,6 +48,7 @@ namespace oudaAssignment2 {
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::PictureBox^ frown;
 	private: System::Windows::Forms::Button^ NewGame;
+	private: System::Windows::Forms::PictureBox^ Empty;
 	private: System::Windows::Forms::PictureBox^ A7;
 	private: System::Windows::Forms::PictureBox^ A8;
 	private: System::Windows::Forms::PictureBox^ A6;
@@ -1867,76 +1870,13 @@ namespace oudaAssignment2 {
 		//queen position input through GUI
 		String^ queenINPUT = textBox1->Text;
 		String^ QUEENinput = queenINPUT->ToUpper();
+		PictureBox^ queenBox = ShowQueens(QUEENinput);
+		if (queenBox == Empty)
+			return;
+		queenBox->Visible = true;
 
-		//making queens' pictures visible
-		if (A1->Name == QUEENinput)  A1->Visible = true;
-		else if (A2->Name == QUEENinput)  A2->Visible = true;
-		else if (A3->Name == QUEENinput)  A3->Visible = true;
-		else if (A4->Name == QUEENinput)  A4->Visible = true;
-		else if (A5->Name == QUEENinput)  A5->Visible = true;
-		else if (A6->Name == QUEENinput)  A6->Visible = true;
-		else if (A7->Name == QUEENinput)  A7->Visible = true;
-		else if (A8->Name == QUEENinput)  A8->Visible = true;
-		else if (B1->Name == QUEENinput)  B1->Visible = true;
-		else if (B2->Name == QUEENinput)  B2->Visible = true;
-		else if (B3->Name == QUEENinput)  B3->Visible = true;
-		else if (B4->Name == QUEENinput)  B4->Visible = true;
-		else if (B5->Name == QUEENinput)  B5->Visible = true;
-		else if (B6->Name == QUEENinput)  B6->Visible = true;
-		else if (B7->Name == QUEENinput)  B7->Visible = true;
-		else if (B8->Name == QUEENinput)  B8->Visible = true;
-		else if (C1->Name == QUEENinput)  C1->Visible = true;
-		else if (C2->Name == QUEENinput)  C2->Visible = true;
-		else if (C3->Name == QUEENinput)  C3->Visible = true;
-		else if (C4->Name == QUEENinput)  C4->Visible = true;
-		else if (C5->Name == QUEENinput)  C5->Visible = true;
-		else if (C6->Name == QUEENinput)  C6->Visible = true;
-		else if (C7->Name == QUEENinput)  C7->Visible = true;
-		else if (C8->Name == QUEENinput)  C8->Visible = true;
-		else if (D1->Name == QUEENinput)  D1->Visible = true;
-		else if (D2->Name == QUEENinput)  D2->Visible = true;
-		else if (D3->Name == QUEENinput)  D3->Visible = true;
-		else if (D4->Name == QUEENinput)  D4->Visible = true;
-		else if (D5->Name == QUEENinput)  D5->Visible = true;
-		else if (D6->Name == QUEENinput)  D6->Visible = true;
-		else if (D7->Name == QUEENinput)  D7->Visible = true;
-		else if (D8->Name == QUEENinput)  D8->Visible = true;
-		else if (E1->Name == QUEENinput)  E1->Visible = true;
-		else if (E2->Name == QUEENinput)  E2->Visible = true;
-		else if (E3->Name == QUEENinput)  E3->Visible = true;
-		else if (E4->Name == QUEENinput)  E4->Visible = true;
-		else if (E5->Name == QUEENinput)  E5->Visible = true;
-		else if (E6->Name == QUEENinput)  E6->Visible = true;
-		else if (E7->Name == QUEENinput)  E7->Visible = true;
-		else if (E8->Name == QUEENinput)  E8->Visible = true;
-		else if (F1->Name == QUEENinput)  F1->Visible = true;
-		else if (F2->Name == QUEENinput)  F2->Visible = true;
-		else if (F3->Name == QUEENinput)  F3->Visible = true;
-		else if (F4->Name == QUEENinput)  F4->Visible = true;
-		else if (F5->Name == QUEENinput)  F5->Visible = true;
-		else if (F6->Name == QUEENinput)  F6->Visible = true;
-		else if (F7->Name == QUEENinput)  F7->Visible = true;
-		else if (F8->Name == QUEENinput)  F8->Visible = true;
-		else if (G1->Name == QUEENinput)  G1->Visible = true;
-		else if (G2->Name == QUEENinput)  G2->Visible = true;
-		else if (G3->Name == QUEENinput)  G3->Visible = true;
-		else if (G4->Name == QUEENinput)  G4->Visible = true;
-		else if (G5->Name == QUEENinput)  G5->Visible = true;
-		else if (G6->Name == QUEENinput)  G6->Visible = true;
-		else if (G7->Name == QUEENinput)  G7->Visible = true;
-		else if (G8->Name == QUEENinput)  G8->Visible = true;
-		else if (H1->Name == QUEENinput)  H1->Visible = true;
-		else if (H2->Name == QUEENinput)  H2->Visible = true;
-		else if (H3->Name == QUEENinput)  H3->Visible = true;
-		else if (H4->Name == QUEENinput)  H4->Visible = true;
-		else if (H5->Name == QUEENinput)  H5->Visible = true;
-		else if (H6->Name == QUEENinput)  H6->Visible = true;
-		else if (H7->Name == QUEENinput)  H7->Visible = true;
-		else if (H8->Name == QUEENinput)  H8->Visible = true;
-		else { MessageBox::Show("INPUT ACCEPTIBLE RANGE is  A1....H8"); goto next; }
 
 		//conversion of current queen coordinates string^->char
-
 		if (QUEENinput->Substring(0, 1) == "A") CurrentQX = 1;
 		if (QUEENinput->Substring(0, 1) == "B") CurrentQX = 2;
 		if (QUEENinput->Substring(0, 1) == "C") CurrentQX = 3;
@@ -1960,29 +1900,92 @@ namespace oudaAssignment2 {
 		//making "frown" if queen's position is bad or "smile" if  queen's position is good
 		if (ChessBoard[CurrentQX, CurrentQY] == "q" || ChessBoard[CurrentQX, CurrentQY] == "Q")
 		{
-			System::Media::SoundPlayer^ simpleSound = gcnew
-				System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
+			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
 			simpleSound->Play();
-
 			frown->Visible = true;
-
-
 		}
 		else
 		{
-			System::Media::SoundPlayer^ simpleSound = gcnew
-				System::Media::SoundPlayer("c:\\windows\\media\\tada.wav");
+			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("c:\\windows\\media\\tada.wav");
 			simpleSound->Play();
-
 			smile->Visible = true;
-			numberOfQueens = numberOfQueens + 1;
-
-
+			numberOfQueens++;
 			congrat(numberOfQueens);
-
 		}
+	}
 
-	next:;
+		   // Make the given Queen visible, and return false if the input was invalid
+	private: PictureBox^ ShowQueens(String^ QUEENinput)
+	{
+		//making queens' pictures visible
+		if (A1->Name == QUEENinput)  A1->Visible = true;
+		else if (A2->Name == QUEENinput)  return A2;
+		else if (A3->Name == QUEENinput)  return A3;
+		else if (A4->Name == QUEENinput)return  A4;
+		else if (A5->Name == QUEENinput) return A5;
+		else if (A6->Name == QUEENinput) return A6;
+		else if (A7->Name == QUEENinput)return  A7;
+		else if (A8->Name == QUEENinput) return A8;
+		else if (B1->Name == QUEENinput) return B1;
+		else if (B2->Name == QUEENinput) return B2;
+		else if (B3->Name == QUEENinput) return B3;
+		else if (B4->Name == QUEENinput)return  B4;
+		else if (B5->Name == QUEENinput) return B5;
+		else if (B6->Name == QUEENinput) return B6;
+		else if (B7->Name == QUEENinput) return B7;
+		else if (B8->Name == QUEENinput)return  B8;
+		else if (C1->Name == QUEENinput) return C1;
+		else if (C2->Name == QUEENinput) return C2;
+		else if (C3->Name == QUEENinput) return C3;
+		else if (C4->Name == QUEENinput)return  C4;
+		else if (C5->Name == QUEENinput) return C5;
+		else if (C6->Name == QUEENinput) return C6;
+		else if (C7->Name == QUEENinput)return  C7;
+		else if (C8->Name == QUEENinput)return  C8;
+		else if (D1->Name == QUEENinput)return  D1;
+		else if (D2->Name == QUEENinput)return  D2;
+		else if (D3->Name == QUEENinput) return D3;
+		else if (D4->Name == QUEENinput)return  D4;
+		else if (D5->Name == QUEENinput) return D5;
+		else if (D6->Name == QUEENinput) return D6;
+		else if (D7->Name == QUEENinput) return D7;
+		else if (D8->Name == QUEENinput) return D8;
+		else if (E1->Name == QUEENinput) return E1;
+		else if (E2->Name == QUEENinput) return E2;
+		else if (E3->Name == QUEENinput) return E3;
+		else if (E4->Name == QUEENinput) return E4;
+		else if (E5->Name == QUEENinput) return E5;
+		else if (E6->Name == QUEENinput) return E6;
+		else if (E7->Name == QUEENinput) return E7;
+		else if (E8->Name == QUEENinput) return E8;
+		else if (F1->Name == QUEENinput) return F1;
+		else if (F2->Name == QUEENinput) return F2;
+		else if (F3->Name == QUEENinput) return F3;
+		else if (F4->Name == QUEENinput) return F4;
+		else if (F5->Name == QUEENinput) return F5;
+		else if (F6->Name == QUEENinput) return F6;
+		else if (F7->Name == QUEENinput) return F7;
+		else if (F8->Name == QUEENinput) return F8;
+		else if (G1->Name == QUEENinput) return G1;
+		else if (G2->Name == QUEENinput) return G2;
+		else if (G3->Name == QUEENinput) return G3;
+		else if (G4->Name == QUEENinput) return G4;
+		else if (G5->Name == QUEENinput) return G5;
+		else if (G6->Name == QUEENinput) return G6;
+		else if (G7->Name == QUEENinput) return G7;
+		else if (G8->Name == QUEENinput) return G8;
+		else if (H1->Name == QUEENinput) return H1;
+		else if (H2->Name == QUEENinput) return H2;
+		else if (H3->Name == QUEENinput) return H3;
+		else if (H4->Name == QUEENinput) return H4;
+		else if (H5->Name == QUEENinput) return H5;
+		else if (H6->Name == QUEENinput) return H6;
+		else if (H7->Name == QUEENinput) return H7;
+		else if (H8->Name == QUEENinput) return H8;
+		else {
+			MessageBox::Show("INPUT ACCEPTIBLE RANGE is  A1....H8");
+			return Empty;
+		}
 	}
 
 
@@ -2158,6 +2161,7 @@ namespace oudaAssignment2 {
 
 
 	}
+
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
