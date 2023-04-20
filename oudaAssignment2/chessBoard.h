@@ -128,13 +128,161 @@ namespace oudaAssignment2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::ImageList^ imageList1;
+	private: System::Windows::Forms::PictureBox^ f8r;
+
+	private: System::Windows::Forms::PictureBox^ d8r;
+
+	private: System::Windows::Forms::PictureBox^ b8r;
+
+	private: System::Windows::Forms::PictureBox^ a7r;
+	private: System::Windows::Forms::PictureBox^ c7r;
+	private: System::Windows::Forms::PictureBox^ e7r;
+	private: System::Windows::Forms::PictureBox^ g7r;
+	private: System::Windows::Forms::PictureBox^ h8r;
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ h6r;
+
+	private: System::Windows::Forms::PictureBox^ f6r;
+
+	private: System::Windows::Forms::PictureBox^ d6r;
+
+	private: System::Windows::Forms::PictureBox^ b6r;
+	private: System::Windows::Forms::PictureBox^ c5r;
+	private: System::Windows::Forms::PictureBox^ e5r;
+	private: System::Windows::Forms::PictureBox^ g5r;
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ a5r;
+	private: System::Windows::Forms::PictureBox^ b4r;
+	private: System::Windows::Forms::PictureBox^ d4r;
+	private: System::Windows::Forms::PictureBox^ f4r;
+	private: System::Windows::Forms::PictureBox^ h4r;
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ e3r;
+
+	private: System::Windows::Forms::PictureBox^ c3r;
+
+	private: System::Windows::Forms::PictureBox^ a3r;
+	private: System::Windows::Forms::PictureBox^ g3r;
+
+	private: System::Windows::Forms::PictureBox^ b2r;
+	private: System::Windows::Forms::PictureBox^ d2r;
+	private: System::Windows::Forms::PictureBox^ f2r;
+	private: System::Windows::Forms::PictureBox^ h2r;
+
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ g1r;
+
+	private: System::Windows::Forms::PictureBox^ e1r;
+
+	private: System::Windows::Forms::PictureBox^ c1r;
+
+	private: System::Windows::Forms::PictureBox^ a1r;
+	private: System::Windows::Forms::PictureBox^ a8r;
+	private: System::Windows::Forms::PictureBox^ c8r;
+	private: System::Windows::Forms::PictureBox^ e8r;
+	private: System::Windows::Forms::PictureBox^ g8r;
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ b7r;
+	private: System::Windows::Forms::PictureBox^ d7r;
+	private: System::Windows::Forms::PictureBox^ f7r;
+	private: System::Windows::Forms::PictureBox^ h7r;
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ g6r;
+
+	private: System::Windows::Forms::PictureBox^ e6r;
+
+	private: System::Windows::Forms::PictureBox^ c6r;
+
+	private: System::Windows::Forms::PictureBox^ a6r;
+	private: System::Windows::Forms::PictureBox^ f5r;
+	private: System::Windows::Forms::PictureBox^ h5r;
+
+
+	private: System::Windows::Forms::PictureBox^ d5r;
+
+	private: System::Windows::Forms::PictureBox^ b5r;
+	private: System::Windows::Forms::PictureBox^ e4r;
+	private: System::Windows::Forms::PictureBox^ g4r;
+
+
+
+	private: System::Windows::Forms::PictureBox^ c4r;
+
+	private: System::Windows::Forms::PictureBox^ a4r;
+	private: System::Windows::Forms::PictureBox^ b3r;
+	private: System::Windows::Forms::PictureBox^ d3r;
+	private: System::Windows::Forms::PictureBox^ f3r;
+	private: System::Windows::Forms::PictureBox^ h3r;
+
+
+
+
+	private: System::Windows::Forms::PictureBox^ g2r;
+
+	private: System::Windows::Forms::PictureBox^ e2r;
+
+	private: System::Windows::Forms::PictureBox^ c2r;
+
+	private: System::Windows::Forms::PictureBox^ a2r;
+	private: System::Windows::Forms::PictureBox^ b1r;
+	private: System::Windows::Forms::PictureBox^ d1r;
+	private: System::Windows::Forms::PictureBox^ f1r;
+	private: System::Windows::Forms::PictureBox^ h1r;
+
+
+
+
+
+
+
+
+
+
+
+
+	private: System::ComponentModel::IContainer^ components;
+
+
+
 	public:
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -143,6 +291,7 @@ namespace oudaAssignment2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(chessBoard::typeid));
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
@@ -222,6 +371,71 @@ namespace oudaAssignment2 {
 			this->removeGueenButton = (gcnew System::Windows::Forms::Button());
 			this->scoreLabel = (gcnew System::Windows::Forms::Label());
 			this->scoreValue = (gcnew System::Windows::Forms::Label());
+			this->imageList1 = (gcnew System::Windows::Forms::ImageList(this->components));
+			this->f8r = (gcnew System::Windows::Forms::PictureBox());
+			this->d8r = (gcnew System::Windows::Forms::PictureBox());
+			this->b8r = (gcnew System::Windows::Forms::PictureBox());
+			this->a7r = (gcnew System::Windows::Forms::PictureBox());
+			this->c7r = (gcnew System::Windows::Forms::PictureBox());
+			this->e7r = (gcnew System::Windows::Forms::PictureBox());
+			this->g7r = (gcnew System::Windows::Forms::PictureBox());
+			this->h8r = (gcnew System::Windows::Forms::PictureBox());
+			this->h6r = (gcnew System::Windows::Forms::PictureBox());
+			this->f6r = (gcnew System::Windows::Forms::PictureBox());
+			this->d6r = (gcnew System::Windows::Forms::PictureBox());
+			this->b6r = (gcnew System::Windows::Forms::PictureBox());
+			this->c5r = (gcnew System::Windows::Forms::PictureBox());
+			this->e5r = (gcnew System::Windows::Forms::PictureBox());
+			this->g5r = (gcnew System::Windows::Forms::PictureBox());
+			this->a5r = (gcnew System::Windows::Forms::PictureBox());
+			this->b4r = (gcnew System::Windows::Forms::PictureBox());
+			this->d4r = (gcnew System::Windows::Forms::PictureBox());
+			this->f4r = (gcnew System::Windows::Forms::PictureBox());
+			this->h4r = (gcnew System::Windows::Forms::PictureBox());
+			this->e3r = (gcnew System::Windows::Forms::PictureBox());
+			this->c3r = (gcnew System::Windows::Forms::PictureBox());
+			this->a3r = (gcnew System::Windows::Forms::PictureBox());
+			this->g3r = (gcnew System::Windows::Forms::PictureBox());
+			this->b2r = (gcnew System::Windows::Forms::PictureBox());
+			this->d2r = (gcnew System::Windows::Forms::PictureBox());
+			this->f2r = (gcnew System::Windows::Forms::PictureBox());
+			this->h2r = (gcnew System::Windows::Forms::PictureBox());
+			this->g1r = (gcnew System::Windows::Forms::PictureBox());
+			this->e1r = (gcnew System::Windows::Forms::PictureBox());
+			this->c1r = (gcnew System::Windows::Forms::PictureBox());
+			this->a1r = (gcnew System::Windows::Forms::PictureBox());
+			this->a8r = (gcnew System::Windows::Forms::PictureBox());
+			this->c8r = (gcnew System::Windows::Forms::PictureBox());
+			this->e8r = (gcnew System::Windows::Forms::PictureBox());
+			this->g8r = (gcnew System::Windows::Forms::PictureBox());
+			this->b7r = (gcnew System::Windows::Forms::PictureBox());
+			this->d7r = (gcnew System::Windows::Forms::PictureBox());
+			this->f7r = (gcnew System::Windows::Forms::PictureBox());
+			this->h7r = (gcnew System::Windows::Forms::PictureBox());
+			this->g6r = (gcnew System::Windows::Forms::PictureBox());
+			this->e6r = (gcnew System::Windows::Forms::PictureBox());
+			this->c6r = (gcnew System::Windows::Forms::PictureBox());
+			this->a6r = (gcnew System::Windows::Forms::PictureBox());
+			this->f5r = (gcnew System::Windows::Forms::PictureBox());
+			this->h5r = (gcnew System::Windows::Forms::PictureBox());
+			this->d5r = (gcnew System::Windows::Forms::PictureBox());
+			this->b5r = (gcnew System::Windows::Forms::PictureBox());
+			this->e4r = (gcnew System::Windows::Forms::PictureBox());
+			this->g4r = (gcnew System::Windows::Forms::PictureBox());
+			this->c4r = (gcnew System::Windows::Forms::PictureBox());
+			this->a4r = (gcnew System::Windows::Forms::PictureBox());
+			this->b3r = (gcnew System::Windows::Forms::PictureBox());
+			this->d3r = (gcnew System::Windows::Forms::PictureBox());
+			this->f3r = (gcnew System::Windows::Forms::PictureBox());
+			this->h3r = (gcnew System::Windows::Forms::PictureBox());
+			this->g2r = (gcnew System::Windows::Forms::PictureBox());
+			this->e2r = (gcnew System::Windows::Forms::PictureBox());
+			this->c2r = (gcnew System::Windows::Forms::PictureBox());
+			this->a2r = (gcnew System::Windows::Forms::PictureBox());
+			this->b1r = (gcnew System::Windows::Forms::PictureBox());
+			this->d1r = (gcnew System::Windows::Forms::PictureBox());
+			this->f1r = (gcnew System::Windows::Forms::PictureBox());
+			this->h1r = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->frown))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A8))->BeginInit();
@@ -289,6 +503,70 @@ namespace oudaAssignment2 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->H1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->smile))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g8r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h7r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a6r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b5r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a4r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h3r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a2r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f1r))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h1r))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label13
@@ -1591,7 +1869,6 @@ namespace oudaAssignment2 {
 			this->scoreLabel->Size = System::Drawing::Size(60, 24);
 			this->scoreLabel->TabIndex = 324;
 			this->scoreLabel->Text = L"Score";
-			this->scoreLabel->Click += gcnew System::EventHandler(this, &chessBoard::label2_Click);
 			// 
 			// scoreValue
 			// 
@@ -1605,11 +1882,785 @@ namespace oudaAssignment2 {
 			this->scoreValue->Text = L"0";
 			this->scoreValue->TextAlign = System::Drawing::ContentAlignment::BottomRight;
 			// 
+			// imageList1
+			// 
+			this->imageList1->ColorDepth = System::Windows::Forms::ColorDepth::Depth8Bit;
+			this->imageList1->ImageSize = System::Drawing::Size(16, 16);
+			this->imageList1->TransparentColor = System::Drawing::Color::Transparent;
+			// 
+			// f8r
+			// 
+			this->f8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f8r.BackgroundImage")));
+			this->f8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f8r->Location = System::Drawing::Point(339, 73);
+			this->f8r->Name = L"f8r";
+			this->f8r->Size = System::Drawing::Size(45, 45);
+			this->f8r->TabIndex = 326;
+			this->f8r->TabStop = false;
+			this->f8r->Visible = false;
+			// 
+			// d8r
+			// 
+			this->d8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d8r.BackgroundImage")));
+			this->d8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d8r->Location = System::Drawing::Point(233, 73);
+			this->d8r->Name = L"d8r";
+			this->d8r->Size = System::Drawing::Size(45, 45);
+			this->d8r->TabIndex = 327;
+			this->d8r->TabStop = false;
+			this->d8r->Visible = false;
+			// 
+			// b8r
+			// 
+			this->b8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b8r.BackgroundImage")));
+			this->b8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b8r->Location = System::Drawing::Point(123, 73);
+			this->b8r->Name = L"b8r";
+			this->b8r->Size = System::Drawing::Size(45, 45);
+			this->b8r->TabIndex = 328;
+			this->b8r->TabStop = false;
+			this->b8r->Visible = false;
+			// 
+			// a7r
+			// 
+			this->a7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a7r.BackgroundImage")));
+			this->a7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a7r->Location = System::Drawing::Point(68, 130);
+			this->a7r->Name = L"a7r";
+			this->a7r->Size = System::Drawing::Size(45, 45);
+			this->a7r->TabIndex = 329;
+			this->a7r->TabStop = false;
+			this->a7r->Visible = false;
+			// 
+			// c7r
+			// 
+			this->c7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c7r.BackgroundImage")));
+			this->c7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c7r->Location = System::Drawing::Point(179, 130);
+			this->c7r->Name = L"c7r";
+			this->c7r->Size = System::Drawing::Size(45, 45);
+			this->c7r->TabIndex = 330;
+			this->c7r->TabStop = false;
+			this->c7r->Visible = false;
+			// 
+			// e7r
+			// 
+			this->e7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e7r.BackgroundImage")));
+			this->e7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e7r->Location = System::Drawing::Point(286, 130);
+			this->e7r->Name = L"e7r";
+			this->e7r->Size = System::Drawing::Size(45, 45);
+			this->e7r->TabIndex = 331;
+			this->e7r->TabStop = false;
+			this->e7r->Visible = false;
+			// 
+			// g7r
+			// 
+			this->g7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g7r.BackgroundImage")));
+			this->g7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g7r->Location = System::Drawing::Point(393, 130);
+			this->g7r->Name = L"g7r";
+			this->g7r->Size = System::Drawing::Size(45, 45);
+			this->g7r->TabIndex = 332;
+			this->g7r->TabStop = false;
+			this->g7r->Visible = false;
+			// 
+			// h8r
+			// 
+			this->h8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h8r.BackgroundImage")));
+			this->h8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h8r->Location = System::Drawing::Point(451, 73);
+			this->h8r->Name = L"h8r";
+			this->h8r->Size = System::Drawing::Size(45, 45);
+			this->h8r->TabIndex = 333;
+			this->h8r->TabStop = false;
+			this->h8r->Visible = false;
+			// 
+			// h6r
+			// 
+			this->h6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h6r.BackgroundImage")));
+			this->h6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h6r->Location = System::Drawing::Point(451, 184);
+			this->h6r->Name = L"h6r";
+			this->h6r->Size = System::Drawing::Size(45, 45);
+			this->h6r->TabIndex = 334;
+			this->h6r->TabStop = false;
+			this->h6r->Visible = false;
+			// 
+			// f6r
+			// 
+			this->f6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f6r.BackgroundImage")));
+			this->f6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f6r->Location = System::Drawing::Point(339, 184);
+			this->f6r->Name = L"f6r";
+			this->f6r->Size = System::Drawing::Size(45, 45);
+			this->f6r->TabIndex = 335;
+			this->f6r->TabStop = false;
+			this->f6r->Visible = false;
+			// 
+			// d6r
+			// 
+			this->d6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d6r.BackgroundImage")));
+			this->d6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d6r->Location = System::Drawing::Point(233, 184);
+			this->d6r->Name = L"d6r";
+			this->d6r->Size = System::Drawing::Size(45, 45);
+			this->d6r->TabIndex = 336;
+			this->d6r->TabStop = false;
+			this->d6r->Visible = false;
+			// 
+			// b6r
+			// 
+			this->b6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b6r.BackgroundImage")));
+			this->b6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b6r->Location = System::Drawing::Point(125, 184);
+			this->b6r->Name = L"b6r";
+			this->b6r->Size = System::Drawing::Size(45, 45);
+			this->b6r->TabIndex = 337;
+			this->b6r->TabStop = false;
+			this->b6r->Visible = false;
+			// 
+			// c5r
+			// 
+			this->c5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c5r.BackgroundImage")));
+			this->c5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c5r->Location = System::Drawing::Point(179, 240);
+			this->c5r->Name = L"c5r";
+			this->c5r->Size = System::Drawing::Size(45, 45);
+			this->c5r->TabIndex = 338;
+			this->c5r->TabStop = false;
+			this->c5r->Visible = false;
+			// 
+			// e5r
+			// 
+			this->e5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e5r.BackgroundImage")));
+			this->e5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e5r->Location = System::Drawing::Point(286, 240);
+			this->e5r->Name = L"e5r";
+			this->e5r->Size = System::Drawing::Size(45, 45);
+			this->e5r->TabIndex = 339;
+			this->e5r->TabStop = false;
+			this->e5r->Visible = false;
+			// 
+			// g5r
+			// 
+			this->g5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g5r.BackgroundImage")));
+			this->g5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g5r->Location = System::Drawing::Point(394, 240);
+			this->g5r->Name = L"g5r";
+			this->g5r->Size = System::Drawing::Size(45, 45);
+			this->g5r->TabIndex = 340;
+			this->g5r->TabStop = false;
+			this->g5r->Visible = false;
+			// 
+			// a5r
+			// 
+			this->a5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a5r.BackgroundImage")));
+			this->a5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a5r->Location = System::Drawing::Point(68, 240);
+			this->a5r->Name = L"a5r";
+			this->a5r->Size = System::Drawing::Size(45, 45);
+			this->a5r->TabIndex = 341;
+			this->a5r->TabStop = false;
+			this->a5r->Visible = false;
+			// 
+			// b4r
+			// 
+			this->b4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b4r.BackgroundImage")));
+			this->b4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b4r->Location = System::Drawing::Point(127, 290);
+			this->b4r->Name = L"b4r";
+			this->b4r->Size = System::Drawing::Size(45, 45);
+			this->b4r->TabIndex = 342;
+			this->b4r->TabStop = false;
+			this->b4r->Visible = false;
+			// 
+			// d4r
+			// 
+			this->d4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d4r.BackgroundImage")));
+			this->d4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d4r->Location = System::Drawing::Point(233, 290);
+			this->d4r->Name = L"d4r";
+			this->d4r->Size = System::Drawing::Size(45, 45);
+			this->d4r->TabIndex = 343;
+			this->d4r->TabStop = false;
+			this->d4r->Visible = false;
+			// 
+			// f4r
+			// 
+			this->f4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f4r.BackgroundImage")));
+			this->f4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f4r->Location = System::Drawing::Point(339, 290);
+			this->f4r->Name = L"f4r";
+			this->f4r->Size = System::Drawing::Size(45, 45);
+			this->f4r->TabIndex = 344;
+			this->f4r->TabStop = false;
+			this->f4r->Visible = false;
+			// 
+			// h4r
+			// 
+			this->h4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h4r.BackgroundImage")));
+			this->h4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h4r->Location = System::Drawing::Point(452, 289);
+			this->h4r->Name = L"h4r";
+			this->h4r->Size = System::Drawing::Size(45, 45);
+			this->h4r->TabIndex = 345;
+			this->h4r->TabStop = false;
+			this->h4r->Visible = false;
+			// 
+			// e3r
+			// 
+			this->e3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e3r.BackgroundImage")));
+			this->e3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e3r->Location = System::Drawing::Point(286, 345);
+			this->e3r->Name = L"e3r";
+			this->e3r->Size = System::Drawing::Size(45, 45);
+			this->e3r->TabIndex = 346;
+			this->e3r->TabStop = false;
+			this->e3r->Visible = false;
+			// 
+			// c3r
+			// 
+			this->c3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c3r.BackgroundImage")));
+			this->c3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c3r->Location = System::Drawing::Point(179, 345);
+			this->c3r->Name = L"c3r";
+			this->c3r->Size = System::Drawing::Size(45, 45);
+			this->c3r->TabIndex = 347;
+			this->c3r->TabStop = false;
+			this->c3r->Visible = false;
+			// 
+			// a3r
+			// 
+			this->a3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a3r.BackgroundImage")));
+			this->a3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a3r->Location = System::Drawing::Point(67, 345);
+			this->a3r->Name = L"a3r";
+			this->a3r->Size = System::Drawing::Size(45, 45);
+			this->a3r->TabIndex = 348;
+			this->a3r->TabStop = false;
+			this->a3r->Visible = false;
+			// 
+			// g3r
+			// 
+			this->g3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g3r.BackgroundImage")));
+			this->g3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g3r->Location = System::Drawing::Point(394, 345);
+			this->g3r->Name = L"g3r";
+			this->g3r->Size = System::Drawing::Size(45, 45);
+			this->g3r->TabIndex = 349;
+			this->g3r->TabStop = false;
+			this->g3r->Visible = false;
+			// 
+			// b2r
+			// 
+			this->b2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b2r.BackgroundImage")));
+			this->b2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b2r->Location = System::Drawing::Point(123, 402);
+			this->b2r->Name = L"b2r";
+			this->b2r->Size = System::Drawing::Size(45, 45);
+			this->b2r->TabIndex = 350;
+			this->b2r->TabStop = false;
+			this->b2r->Visible = false;
+			// 
+			// d2r
+			// 
+			this->d2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d2r.BackgroundImage")));
+			this->d2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d2r->Location = System::Drawing::Point(233, 402);
+			this->d2r->Name = L"d2r";
+			this->d2r->Size = System::Drawing::Size(45, 45);
+			this->d2r->TabIndex = 351;
+			this->d2r->TabStop = false;
+			this->d2r->Visible = false;
+			// 
+			// f2r
+			// 
+			this->f2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f2r.BackgroundImage")));
+			this->f2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f2r->Location = System::Drawing::Point(339, 402);
+			this->f2r->Name = L"f2r";
+			this->f2r->Size = System::Drawing::Size(45, 45);
+			this->f2r->TabIndex = 352;
+			this->f2r->TabStop = false;
+			this->f2r->Visible = false;
+			// 
+			// h2r
+			// 
+			this->h2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h2r.BackgroundImage")));
+			this->h2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h2r->Location = System::Drawing::Point(451, 402);
+			this->h2r->Name = L"h2r";
+			this->h2r->Size = System::Drawing::Size(45, 45);
+			this->h2r->TabIndex = 353;
+			this->h2r->TabStop = false;
+			this->h2r->Visible = false;
+			// 
+			// g1r
+			// 
+			this->g1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g1r.BackgroundImage")));
+			this->g1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g1r->Location = System::Drawing::Point(394, 457);
+			this->g1r->Name = L"g1r";
+			this->g1r->Size = System::Drawing::Size(45, 45);
+			this->g1r->TabIndex = 354;
+			this->g1r->TabStop = false;
+			this->g1r->Visible = false;
+			// 
+			// e1r
+			// 
+			this->e1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e1r.BackgroundImage")));
+			this->e1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e1r->Location = System::Drawing::Point(286, 457);
+			this->e1r->Name = L"e1r";
+			this->e1r->Size = System::Drawing::Size(45, 45);
+			this->e1r->TabIndex = 355;
+			this->e1r->TabStop = false;
+			this->e1r->Visible = false;
+			// 
+			// c1r
+			// 
+			this->c1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c1r.BackgroundImage")));
+			this->c1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c1r->Location = System::Drawing::Point(179, 457);
+			this->c1r->Name = L"c1r";
+			this->c1r->Size = System::Drawing::Size(45, 45);
+			this->c1r->TabIndex = 356;
+			this->c1r->TabStop = false;
+			this->c1r->Visible = false;
+			// 
+			// a1r
+			// 
+			this->a1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a1r.BackgroundImage")));
+			this->a1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a1r->Location = System::Drawing::Point(68, 457);
+			this->a1r->Name = L"a1r";
+			this->a1r->Size = System::Drawing::Size(45, 45);
+			this->a1r->TabIndex = 357;
+			this->a1r->TabStop = false;
+			this->a1r->Visible = false;
+			// 
+			// a8r
+			// 
+			this->a8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a8r.BackgroundImage")));
+			this->a8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a8r->Location = System::Drawing::Point(67, 73);
+			this->a8r->Name = L"a8r";
+			this->a8r->Size = System::Drawing::Size(45, 45);
+			this->a8r->TabIndex = 358;
+			this->a8r->TabStop = false;
+			this->a8r->Visible = false;
+			// 
+			// c8r
+			// 
+			this->c8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c8r.BackgroundImage")));
+			this->c8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c8r->Location = System::Drawing::Point(179, 73);
+			this->c8r->Name = L"c8r";
+			this->c8r->Size = System::Drawing::Size(45, 45);
+			this->c8r->TabIndex = 359;
+			this->c8r->TabStop = false;
+			this->c8r->Visible = false;
+			// 
+			// e8r
+			// 
+			this->e8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e8r.BackgroundImage")));
+			this->e8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e8r->Location = System::Drawing::Point(284, 73);
+			this->e8r->Name = L"e8r";
+			this->e8r->Size = System::Drawing::Size(45, 45);
+			this->e8r->TabIndex = 360;
+			this->e8r->TabStop = false;
+			this->e8r->Visible = false;
+			// 
+			// g8r
+			// 
+			this->g8r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g8r.BackgroundImage")));
+			this->g8r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g8r->Location = System::Drawing::Point(394, 73);
+			this->g8r->Name = L"g8r";
+			this->g8r->Size = System::Drawing::Size(45, 45);
+			this->g8r->TabIndex = 361;
+			this->g8r->TabStop = false;
+			this->g8r->Visible = false;
+			// 
+			// b7r
+			// 
+			this->b7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b7r.BackgroundImage")));
+			this->b7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b7r->Location = System::Drawing::Point(125, 130);
+			this->b7r->Name = L"b7r";
+			this->b7r->Size = System::Drawing::Size(45, 45);
+			this->b7r->TabIndex = 362;
+			this->b7r->TabStop = false;
+			this->b7r->Visible = false;
+			// 
+			// d7r
+			// 
+			this->d7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d7r.BackgroundImage")));
+			this->d7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d7r->Location = System::Drawing::Point(235, 130);
+			this->d7r->Name = L"d7r";
+			this->d7r->Size = System::Drawing::Size(45, 45);
+			this->d7r->TabIndex = 363;
+			this->d7r->TabStop = false;
+			this->d7r->Visible = false;
+			// 
+			// f7r
+			// 
+			this->f7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f7r.BackgroundImage")));
+			this->f7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f7r->Location = System::Drawing::Point(339, 130);
+			this->f7r->Name = L"f7r";
+			this->f7r->Size = System::Drawing::Size(45, 45);
+			this->f7r->TabIndex = 364;
+			this->f7r->TabStop = false;
+			this->f7r->Visible = false;
+			// 
+			// h7r
+			// 
+			this->h7r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h7r.BackgroundImage")));
+			this->h7r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h7r->Location = System::Drawing::Point(451, 130);
+			this->h7r->Name = L"h7r";
+			this->h7r->Size = System::Drawing::Size(45, 45);
+			this->h7r->TabIndex = 365;
+			this->h7r->TabStop = false;
+			this->h7r->Visible = false;
+			// 
+			// g6r
+			// 
+			this->g6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g6r.BackgroundImage")));
+			this->g6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g6r->Location = System::Drawing::Point(394, 184);
+			this->g6r->Name = L"g6r";
+			this->g6r->Size = System::Drawing::Size(45, 45);
+			this->g6r->TabIndex = 366;
+			this->g6r->TabStop = false;
+			this->g6r->Visible = false;
+			// 
+			// e6r
+			// 
+			this->e6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e6r.BackgroundImage")));
+			this->e6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e6r->Location = System::Drawing::Point(285, 184);
+			this->e6r->Name = L"e6r";
+			this->e6r->Size = System::Drawing::Size(45, 45);
+			this->e6r->TabIndex = 367;
+			this->e6r->TabStop = false;
+			this->e6r->Visible = false;
+			// 
+			// c6r
+			// 
+			this->c6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c6r.BackgroundImage")));
+			this->c6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c6r->Location = System::Drawing::Point(179, 184);
+			this->c6r->Name = L"c6r";
+			this->c6r->Size = System::Drawing::Size(45, 45);
+			this->c6r->TabIndex = 368;
+			this->c6r->TabStop = false;
+			this->c6r->Visible = false;
+			// 
+			// a6r
+			// 
+			this->a6r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a6r.BackgroundImage")));
+			this->a6r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a6r->Location = System::Drawing::Point(68, 184);
+			this->a6r->Name = L"a6r";
+			this->a6r->Size = System::Drawing::Size(45, 45);
+			this->a6r->TabIndex = 369;
+			this->a6r->TabStop = false;
+			this->a6r->Visible = false;
+			// 
+			// f5r
+			// 
+			this->f5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f5r.BackgroundImage")));
+			this->f5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f5r->Location = System::Drawing::Point(339, 241);
+			this->f5r->Name = L"f5r";
+			this->f5r->Size = System::Drawing::Size(45, 45);
+			this->f5r->TabIndex = 370;
+			this->f5r->TabStop = false;
+			this->f5r->Visible = false;
+			// 
+			// h5r
+			// 
+			this->h5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h5r.BackgroundImage")));
+			this->h5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h5r->Location = System::Drawing::Point(451, 240);
+			this->h5r->Name = L"h5r";
+			this->h5r->Size = System::Drawing::Size(45, 45);
+			this->h5r->TabIndex = 371;
+			this->h5r->TabStop = false;
+			this->h5r->Visible = false;
+			// 
+			// d5r
+			// 
+			this->d5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d5r.BackgroundImage")));
+			this->d5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d5r->Location = System::Drawing::Point(233, 240);
+			this->d5r->Name = L"d5r";
+			this->d5r->Size = System::Drawing::Size(45, 45);
+			this->d5r->TabIndex = 372;
+			this->d5r->TabStop = false;
+			this->d5r->Visible = false;
+			// 
+			// b5r
+			// 
+			this->b5r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b5r.BackgroundImage")));
+			this->b5r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b5r->Location = System::Drawing::Point(127, 242);
+			this->b5r->Name = L"b5r";
+			this->b5r->Size = System::Drawing::Size(45, 45);
+			this->b5r->TabIndex = 373;
+			this->b5r->TabStop = false;
+			this->b5r->Visible = false;
+			// 
+			// e4r
+			// 
+			this->e4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e4r.BackgroundImage")));
+			this->e4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e4r->Location = System::Drawing::Point(286, 291);
+			this->e4r->Name = L"e4r";
+			this->e4r->Size = System::Drawing::Size(45, 45);
+			this->e4r->TabIndex = 374;
+			this->e4r->TabStop = false;
+			this->e4r->Visible = false;
+			// 
+			// g4r
+			// 
+			this->g4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g4r.BackgroundImage")));
+			this->g4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g4r->Location = System::Drawing::Point(394, 291);
+			this->g4r->Name = L"g4r";
+			this->g4r->Size = System::Drawing::Size(45, 45);
+			this->g4r->TabIndex = 375;
+			this->g4r->TabStop = false;
+			this->g4r->Visible = false;
+			// 
+			// c4r
+			// 
+			this->c4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c4r.BackgroundImage")));
+			this->c4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c4r->Location = System::Drawing::Point(177, 289);
+			this->c4r->Name = L"c4r";
+			this->c4r->Size = System::Drawing::Size(45, 45);
+			this->c4r->TabIndex = 376;
+			this->c4r->TabStop = false;
+			this->c4r->Visible = false;
+			// 
+			// a4r
+			// 
+			this->a4r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a4r.BackgroundImage")));
+			this->a4r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a4r->Location = System::Drawing::Point(67, 291);
+			this->a4r->Name = L"a4r";
+			this->a4r->Size = System::Drawing::Size(45, 45);
+			this->a4r->TabIndex = 377;
+			this->a4r->TabStop = false;
+			this->a4r->Visible = false;
+			// 
+			// b3r
+			// 
+			this->b3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b3r.BackgroundImage")));
+			this->b3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b3r->Location = System::Drawing::Point(127, 345);
+			this->b3r->Name = L"b3r";
+			this->b3r->Size = System::Drawing::Size(45, 45);
+			this->b3r->TabIndex = 378;
+			this->b3r->TabStop = false;
+			this->b3r->Visible = false;
+			// 
+			// d3r
+			// 
+			this->d3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d3r.BackgroundImage")));
+			this->d3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d3r->Location = System::Drawing::Point(235, 345);
+			this->d3r->Name = L"d3r";
+			this->d3r->Size = System::Drawing::Size(45, 45);
+			this->d3r->TabIndex = 379;
+			this->d3r->TabStop = false;
+			this->d3r->Visible = false;
+			// 
+			// f3r
+			// 
+			this->f3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f3r.BackgroundImage")));
+			this->f3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f3r->Location = System::Drawing::Point(339, 345);
+			this->f3r->Name = L"f3r";
+			this->f3r->Size = System::Drawing::Size(45, 45);
+			this->f3r->TabIndex = 380;
+			this->f3r->TabStop = false;
+			this->f3r->Visible = false;
+			// 
+			// h3r
+			// 
+			this->h3r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h3r.BackgroundImage")));
+			this->h3r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h3r->Location = System::Drawing::Point(452, 345);
+			this->h3r->Name = L"h3r";
+			this->h3r->Size = System::Drawing::Size(45, 45);
+			this->h3r->TabIndex = 381;
+			this->h3r->TabStop = false;
+			this->h3r->Visible = false;
+			// 
+			// g2r
+			// 
+			this->g2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"g2r.BackgroundImage")));
+			this->g2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->g2r->Location = System::Drawing::Point(394, 402);
+			this->g2r->Name = L"g2r";
+			this->g2r->Size = System::Drawing::Size(45, 45);
+			this->g2r->TabIndex = 382;
+			this->g2r->TabStop = false;
+			this->g2r->Visible = false;
+			// 
+			// e2r
+			// 
+			this->e2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"e2r.BackgroundImage")));
+			this->e2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->e2r->Location = System::Drawing::Point(286, 402);
+			this->e2r->Name = L"e2r";
+			this->e2r->Size = System::Drawing::Size(45, 45);
+			this->e2r->TabIndex = 383;
+			this->e2r->TabStop = false;
+			this->e2r->Visible = false;
+			// 
+			// c2r
+			// 
+			this->c2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"c2r.BackgroundImage")));
+			this->c2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->c2r->Location = System::Drawing::Point(179, 402);
+			this->c2r->Name = L"c2r";
+			this->c2r->Size = System::Drawing::Size(45, 45);
+			this->c2r->TabIndex = 384;
+			this->c2r->TabStop = false;
+			this->c2r->Visible = false;
+			// 
+			// a2r
+			// 
+			this->a2r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"a2r.BackgroundImage")));
+			this->a2r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->a2r->Location = System::Drawing::Point(67, 402);
+			this->a2r->Name = L"a2r";
+			this->a2r->Size = System::Drawing::Size(45, 45);
+			this->a2r->TabIndex = 385;
+			this->a2r->TabStop = false;
+			this->a2r->Visible = false;
+			// 
+			// b1r
+			// 
+			this->b1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b1r.BackgroundImage")));
+			this->b1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b1r->Location = System::Drawing::Point(123, 457);
+			this->b1r->Name = L"b1r";
+			this->b1r->Size = System::Drawing::Size(45, 45);
+			this->b1r->TabIndex = 386;
+			this->b1r->TabStop = false;
+			this->b1r->Visible = false;
+			// 
+			// d1r
+			// 
+			this->d1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"d1r.BackgroundImage")));
+			this->d1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->d1r->Location = System::Drawing::Point(233, 457);
+			this->d1r->Name = L"d1r";
+			this->d1r->Size = System::Drawing::Size(45, 45);
+			this->d1r->TabIndex = 387;
+			this->d1r->TabStop = false;
+			this->d1r->Visible = false;
+			// 
+			// f1r
+			// 
+			this->f1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"f1r.BackgroundImage")));
+			this->f1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->f1r->Location = System::Drawing::Point(339, 457);
+			this->f1r->Name = L"f1r";
+			this->f1r->Size = System::Drawing::Size(45, 45);
+			this->f1r->TabIndex = 388;
+			this->f1r->TabStop = false;
+			this->f1r->Visible = false;
+			// 
+			// h1r
+			// 
+			this->h1r->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"h1r.BackgroundImage")));
+			this->h1r->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->h1r->Location = System::Drawing::Point(452, 457);
+			this->h1r->Name = L"h1r";
+			this->h1r->Size = System::Drawing::Size(45, 45);
+			this->h1r->TabIndex = 389;
+			this->h1r->TabStop = false;
+			this->h1r->Visible = false;
+			// 
 			// chessBoard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(710, 575);
+			this->Controls->Add(this->h1r);
+			this->Controls->Add(this->f1r);
+			this->Controls->Add(this->d1r);
+			this->Controls->Add(this->b1r);
+			this->Controls->Add(this->a2r);
+			this->Controls->Add(this->c2r);
+			this->Controls->Add(this->e2r);
+			this->Controls->Add(this->g2r);
+			this->Controls->Add(this->h3r);
+			this->Controls->Add(this->f3r);
+			this->Controls->Add(this->d3r);
+			this->Controls->Add(this->b3r);
+			this->Controls->Add(this->a4r);
+			this->Controls->Add(this->c4r);
+			this->Controls->Add(this->g4r);
+			this->Controls->Add(this->e4r);
+			this->Controls->Add(this->b5r);
+			this->Controls->Add(this->d5r);
+			this->Controls->Add(this->h5r);
+			this->Controls->Add(this->f5r);
+			this->Controls->Add(this->a6r);
+			this->Controls->Add(this->c6r);
+			this->Controls->Add(this->e6r);
+			this->Controls->Add(this->g6r);
+			this->Controls->Add(this->h7r);
+			this->Controls->Add(this->f7r);
+			this->Controls->Add(this->d7r);
+			this->Controls->Add(this->b7r);
+			this->Controls->Add(this->g8r);
+			this->Controls->Add(this->e8r);
+			this->Controls->Add(this->c8r);
+			this->Controls->Add(this->a8r);
+			this->Controls->Add(this->a1r);
+			this->Controls->Add(this->c1r);
+			this->Controls->Add(this->e1r);
+			this->Controls->Add(this->g1r);
+			this->Controls->Add(this->h2r);
+			this->Controls->Add(this->f2r);
+			this->Controls->Add(this->d2r);
+			this->Controls->Add(this->b2r);
+			this->Controls->Add(this->g3r);
+			this->Controls->Add(this->a3r);
+			this->Controls->Add(this->c3r);
+			this->Controls->Add(this->e3r);
+			this->Controls->Add(this->h4r);
+			this->Controls->Add(this->f4r);
+			this->Controls->Add(this->d4r);
+			this->Controls->Add(this->b4r);
+			this->Controls->Add(this->a5r);
+			this->Controls->Add(this->g5r);
+			this->Controls->Add(this->e5r);
+			this->Controls->Add(this->c5r);
+			this->Controls->Add(this->b6r);
+			this->Controls->Add(this->d6r);
+			this->Controls->Add(this->f6r);
+			this->Controls->Add(this->h6r);
+			this->Controls->Add(this->h8r);
+			this->Controls->Add(this->g7r);
+			this->Controls->Add(this->e7r);
+			this->Controls->Add(this->c7r);
+			this->Controls->Add(this->a7r);
+			this->Controls->Add(this->b8r);
+			this->Controls->Add(this->d8r);
+			this->Controls->Add(this->f8r);
 			this->Controls->Add(this->scoreValue);
 			this->Controls->Add(this->scoreLabel);
 			this->Controls->Add(this->removeGueenButton);
@@ -1758,6 +2809,70 @@ namespace oudaAssignment2 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->H1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->smile))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g8r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h7r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a6r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b5r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a4r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h3r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->g2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->e2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->a2r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->b1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->d1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->f1r))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->h1r))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1777,82 +2892,19 @@ namespace oudaAssignment2 {
 		//set up ChessBoard array - used to calculate queens' "star" positions
 		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
 
-		//copying queens' positions from GUI chessboard to ChessBoard array
-		if (A1->Visible == true) ChessBoard[1, 1] = "Q";
-		if (A2->Visible == true) ChessBoard[1, 2] = "Q";
-		if (A3->Visible == true) ChessBoard[1, 3] = "Q";
-		if (A4->Visible == true) ChessBoard[1, 4] = "Q";
-		if (A5->Visible == true) ChessBoard[1, 5] = "Q";
-		if (A6->Visible == true) ChessBoard[1, 6] = "Q";
-		if (A7->Visible == true) ChessBoard[1, 7] = "Q";
-		if (A8->Visible == true) ChessBoard[1, 8] = "Q";
+		fillChessboard(ChessBoard);
+		
+		//queen position input through GUI
+		String^ queenINPUT = textBox1->Text;
+		String^ QUEENinput = queenINPUT->ToUpper();
+		PictureBox^ queenBox = ShowQueens(QUEENinput);
+		if (queenBox == Empty)
+			return;
+		queenBox->Visible = true;
 
-		if (B1->Visible == true) ChessBoard[2, 1] = "Q";
-		if (B2->Visible == true) ChessBoard[2, 2] = "Q";
-		if (B3->Visible == true) ChessBoard[2, 3] = "Q";
-		if (B4->Visible == true) ChessBoard[2, 4] = "Q";
-		if (B5->Visible == true) ChessBoard[2, 5] = "Q";
-		if (B6->Visible == true) ChessBoard[2, 6] = "Q";
-		if (B7->Visible == true) ChessBoard[2, 7] = "Q";
-		if (B8->Visible == true) ChessBoard[2, 8] = "Q";
-
-		if (C1->Visible == true) ChessBoard[3, 1] = "Q";
-		if (C2->Visible == true) ChessBoard[3, 2] = "Q";
-		if (C3->Visible == true) ChessBoard[3, 3] = "Q";
-		if (C4->Visible == true) ChessBoard[3, 4] = "Q";
-		if (C5->Visible == true) ChessBoard[3, 5] = "Q";
-		if (C6->Visible == true) ChessBoard[3, 6] = "Q";
-		if (C7->Visible == true) ChessBoard[3, 7] = "Q";
-		if (C8->Visible == true) ChessBoard[3, 8] = "Q";
-
-		if (D1->Visible == true) ChessBoard[4, 1] = "Q";
-		if (D2->Visible == true) ChessBoard[4, 2] = "Q";
-		if (D3->Visible == true) ChessBoard[4, 3] = "Q";
-		if (D4->Visible == true) ChessBoard[4, 4] = "Q";
-		if (D5->Visible == true) ChessBoard[4, 5] = "Q";
-		if (D6->Visible == true) ChessBoard[4, 6] = "Q";
-		if (D7->Visible == true) ChessBoard[4, 7] = "Q";
-		if (D8->Visible == true) ChessBoard[4, 8] = "Q";
-
-		if (E1->Visible == true) ChessBoard[5, 1] = "Q";
-		if (E2->Visible == true) ChessBoard[5, 2] = "Q";
-		if (E3->Visible == true) ChessBoard[5, 3] = "Q";
-		if (E4->Visible == true) ChessBoard[5, 4] = "Q";
-		if (E5->Visible == true) ChessBoard[5, 5] = "Q";
-		if (E6->Visible == true) ChessBoard[5, 6] = "Q";
-		if (E7->Visible == true) ChessBoard[5, 7] = "Q";
-		if (E8->Visible == true) ChessBoard[5, 8] = "Q";
-
-		if (F1->Visible == true) ChessBoard[6, 1] = "Q";
-		if (F2->Visible == true) ChessBoard[6, 2] = "Q";
-		if (F3->Visible == true) ChessBoard[6, 3] = "Q";
-		if (F4->Visible == true) ChessBoard[6, 4] = "Q";
-		if (F5->Visible == true) ChessBoard[6, 5] = "Q";
-		if (F6->Visible == true) ChessBoard[6, 6] = "Q";
-		if (F7->Visible == true) ChessBoard[6, 7] = "Q";
-		if (F8->Visible == true) ChessBoard[6, 8] = "Q";
-
-		if (G1->Visible == true) ChessBoard[7, 1] = "Q";
-		if (G2->Visible == true) ChessBoard[7, 2] = "Q";
-		if (G3->Visible == true) ChessBoard[7, 3] = "Q";
-		if (G4->Visible == true) ChessBoard[7, 4] = "Q";
-		if (G5->Visible == true) ChessBoard[7, 5] = "Q";
-		if (G6->Visible == true) ChessBoard[7, 6] = "Q";
-		if (G7->Visible == true) ChessBoard[7, 7] = "Q";
-		if (G8->Visible == true) ChessBoard[7, 8] = "Q";
-
-		if (H1->Visible == true) ChessBoard[8, 1] = "Q";
-		if (H2->Visible == true) ChessBoard[8, 2] = "Q";
-		if (H3->Visible == true) ChessBoard[8, 3] = "Q";
-		if (H4->Visible == true) ChessBoard[8, 4] = "Q";
-		if (H5->Visible == true) ChessBoard[8, 5] = "Q";
-		if (H6->Visible == true) ChessBoard[8, 6] = "Q";
-		if (H7->Visible == true) ChessBoard[8, 7] = "Q";
-		if (H8->Visible == true) ChessBoard[8, 8] = "Q";
-
+		fillChessboard(ChessBoard);
 
 		// assignment of "q" to ChessBoard fields fired by queens - queens' "stars"
-
 		for (char xi = 1; xi < 9; xi++)
 		{
 			for (char yj = 1; yj < 9; yj++)
@@ -1863,17 +2915,8 @@ namespace oudaAssignment2 {
 					queenposition(qXshift, qYshift, ChessBoard);
 				}
 			}
-
 		}
-
-
-		//queen position input through GUI
-		String^ queenINPUT = textBox1->Text;
-		String^ QUEENinput = queenINPUT->ToUpper();
-		PictureBox^ queenBox = ShowQueens(QUEENinput);
-		if (queenBox == Empty)
-			return;
-		queenBox->Visible = true;
+		ShowBullets(ChessBoard);
 
 
 		//conversion of current queen coordinates string^->char
@@ -1898,7 +2941,7 @@ namespace oudaAssignment2 {
 
 
 		//making "frown" if queen's position is bad or "smile" if  queen's position is good
-		if (ChessBoard[CurrentQX, CurrentQY] == "q" || ChessBoard[CurrentQX, CurrentQY] == "Q")
+		if (ChessBoard[CurrentQX, CurrentQY] == "q" /* || ChessBoard[CurrentQX, CurrentQY] == "Q"*/)
 		{
 			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
 			simpleSound->Play();
@@ -1914,11 +2957,108 @@ namespace oudaAssignment2 {
 		}
 	}
 
+		   System::Void exitButton_Click(System::Object^ sender, System::EventArgs^ e) {
+			   this->Close();
+		   }
+
+		   System::Void NewGame_Click(System::Object^ sender, System::EventArgs^ e) {	// New Game dialogue
+
+			   frown->Visible = true;
+
+			   System::Media::SoundPlayer^ simpleSound = gcnew											// New Game dialogue
+				   System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");							// New Game dialogue
+			   simpleSound->Play();																	// New Game dialogue
+
+			   MessageBox::Show(" !!! Why ??? Anyway A New Game will START NOW ..... ");		// New Game dialogue
+
+
+
+			   // remove queens from chessboard
+			   A1->Visible = false;		// remove queens from chessboard
+			   A2->Visible = false;		// remove queens from chessboard
+			   A3->Visible = false;		// remove queens from chessboard
+			   A4->Visible = false;		// remove queens from chessboard
+			   A5->Visible = false;		// remove queens from chessboard
+			   A6->Visible = false;		// remove queens from chessboard
+			   A7->Visible = false;		// remove queens from chessboard
+			   A8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   B1->Visible = false;		// remove queens from chessboard
+			   B2->Visible = false;		// remove queens from chessboard
+			   B3->Visible = false;		// remove queens from chessboard
+			   B4->Visible = false;		// remove queens from chessboard
+			   B5->Visible = false;		// remove queens from chessboard
+			   B6->Visible = false;		// remove queens from chessboard
+			   B7->Visible = false;		// remove queens from chessboard
+			   B8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   C1->Visible = false;		// remove queens from chessboard
+			   C2->Visible = false;		// remove queens from chessboard
+			   C3->Visible = false;		// remove queens from chessboard
+			   C4->Visible = false;		// remove queens from chessboard
+			   C5->Visible = false;		// remove queens from chessboard
+			   C6->Visible = false;		// remove queens from chessboard
+			   C7->Visible = false;		// remove queens from chessboard
+			   C8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   D1->Visible = false;		// remove queens from chessboard
+			   D2->Visible = false;		// remove queens from chessboard
+			   D3->Visible = false;		// remove queens from chessboard
+			   D4->Visible = false;		// remove queens from chessboard
+			   D5->Visible = false;		// remove queens from chessboard
+			   D6->Visible = false;		// remove queens from chessboard
+			   D7->Visible = false;		// remove queens from chessboard
+			   D8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   E1->Visible = false;		// remove queens from chessboard
+			   E2->Visible = false;		// remove queens from chessboard
+			   E3->Visible = false;		// remove queens from chessboard
+			   E4->Visible = false;		// remove queens from chessboard
+			   E5->Visible = false;		// remove queens from chessboard
+			   E6->Visible = false;		// remove queens from chessboard
+			   E7->Visible = false;		// remove queens from chessboard
+			   E8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   F1->Visible = false;		// remove queens from chessboard
+			   F2->Visible = false;		// remove queens from chessboard
+			   F3->Visible = false;		// remove queens from chessboard
+			   F4->Visible = false;		// remove queens from chessboard
+			   F5->Visible = false;		// remove queens from chessboard
+			   F6->Visible = false;		// remove queens from chessboard
+			   F7->Visible = false;		// remove queens from chessboard
+			   F8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   G1->Visible = false;		// remove queens from chessboard
+			   G2->Visible = false;		// remove queens from chessboard
+			   G3->Visible = false;		// remove queens from chessboard
+			   G4->Visible = false;		// remove queens from chessboard
+			   G5->Visible = false;		// remove queens from chessboard
+			   G6->Visible = false;		// remove queens from chessboard
+			   G7->Visible = false;		// remove queens from chessboard
+			   G8->Visible = false;		// remove queens from chessboard
+			   // remove queens from chessboard
+			   H1->Visible = false;		// remove queens from chessboard
+			   H2->Visible = false;		// remove queens from chessboard
+			   H3->Visible = false;		// remove queens from chessboard
+			   H4->Visible = false;		// remove queens from chessboard
+			   H5->Visible = false;		// remove queens from chessboard
+			   H6->Visible = false;		// remove queens from chessboard
+			   H7->Visible = false;		// remove queens from chessboard
+			   H8->Visible = false;		// remove queens from chessboard
+
+			   smile->Visible = false;		// remove smile
+			   frown->Visible = false;		// remove frown
+
+			   numberOfQueens = 0;         //set up number of safe queens to 0
+
+
+		   }
+
 		   // Make the given Queen visible, and return false if the input was invalid
 	private: PictureBox^ ShowQueens(String^ QUEENinput)
 	{
 		//making queens' pictures visible
-		if (A1->Name == QUEENinput)  A1->Visible = true;
+		if (A1->Name == QUEENinput)  return A1;
 		else if (A2->Name == QUEENinput)  return A2;
 		else if (A3->Name == QUEENinput)  return A3;
 		else if (A4->Name == QUEENinput)return  A4;
@@ -1988,106 +3128,154 @@ namespace oudaAssignment2 {
 		}
 	}
 
+		   void ShowBullets(array<String^, 2>^ chessboard)
+		   {
+			   if (chessboard[1, 1] == "q") a1r->Visible = true;
+			   if (chessboard[1, 2] == "q") a2r->Visible = true;
+			   if (chessboard[1, 3] == "q") a3r->Visible = true;
+			   if (chessboard[1, 4] == "q") a4r->Visible = true;
+			   if (chessboard[1, 5] == "q") a5r->Visible = true;
+			   if (chessboard[1, 6] == "q") a6r->Visible = true;
+			   if (chessboard[1, 7] == "q") a7r->Visible = true;
+			   if (chessboard[1, 8] == "q") a8r->Visible = true;
+			   if (chessboard[2, 1] == "q") b1r->Visible = true;
+			   if (chessboard[2, 2] == "q") b2r->Visible = true;
+			   if (chessboard[2, 3] == "q") b3r->Visible = true;
+			   if (chessboard[2, 4] == "q") b4r->Visible = true;
+			   if (chessboard[2, 5] == "q") b5r->Visible = true;
+			   if (chessboard[2, 6] == "q") b6r->Visible = true;
+			   if (chessboard[2, 7] == "q") b7r->Visible = true;
+			   if (chessboard[2, 8] == "q") b8r->Visible = true;
+			   if (chessboard[3, 1] == "q") c1r->Visible = true;
+			   if (chessboard[3, 2] == "q") c2r->Visible = true;
+			   if (chessboard[3, 3] == "q") c3r->Visible = true;
+			   if (chessboard[3, 4] == "q") c4r->Visible = true;
+			   if (chessboard[3, 5] == "q") c5r->Visible = true;
+			   if (chessboard[3, 6] == "q") c6r->Visible = true;
+			   if (chessboard[3, 7] == "q") c7r->Visible = true;
+			   if (chessboard[3, 8] == "q") c8r->Visible = true;
+			   if (chessboard[4, 1] == "q") d1r->Visible = true;
+			   if (chessboard[4, 2] == "q") d2r->Visible = true;
+			   if (chessboard[4, 3] == "q") d3r->Visible = true;
+			   if (chessboard[4, 4] == "q") d4r->Visible = true;
+			   if (chessboard[4, 5] == "q") d5r->Visible = true;
+			   if (chessboard[4, 6] == "q") d6r->Visible = true;
+			   if (chessboard[4, 7] == "q") d7r->Visible = true;
+			   if (chessboard[4, 8] == "q") d8r->Visible = true;
+			   if (chessboard[5, 1] == "q") e1r->Visible = true;
+			   if (chessboard[5, 2] == "q") e2r->Visible = true;
+			   if (chessboard[5, 3] == "q") e3r->Visible = true;
+			   if (chessboard[5, 4] == "q") e4r->Visible = true;
+			   if (chessboard[5, 5] == "q") e5r->Visible = true;
+			   if (chessboard[5, 6] == "q") e6r->Visible = true;
+			   if (chessboard[5, 7] == "q") e7r->Visible = true;
+			   if (chessboard[5, 8] == "q") e8r->Visible = true;
+			   if (chessboard[6, 1] == "q") f1r->Visible = true;
+			   if (chessboard[6, 2] == "q") f2r->Visible = true;
+			   if (chessboard[6, 3] == "q") f3r->Visible = true;
+			   if (chessboard[6, 4] == "q") f4r->Visible = true;
+			   if (chessboard[6, 5] == "q") f5r->Visible = true;
+			   if (chessboard[6, 6] == "q") f6r->Visible = true;
+			   if (chessboard[6, 7] == "q") f7r->Visible = true;
+			   if (chessboard[6, 8] == "q") f8r->Visible = true;
+			   if (chessboard[7, 1] == "q") g1r->Visible = true;
+			   if (chessboard[7, 2] == "q") g2r->Visible = true;
+			   if (chessboard[7, 3] == "q") g3r->Visible = true;
+			   if (chessboard[7, 4] == "q") g4r->Visible = true;
+			   if (chessboard[7, 5] == "q") g5r->Visible = true;
+			   if (chessboard[7, 6] == "q") g6r->Visible = true;
+			   if (chessboard[7, 7] == "q") g7r->Visible = true;
+			   if (chessboard[7, 8] == "q") g8r->Visible = true;
+			   if (chessboard[8, 1] == "q") h1r->Visible = true;
+			   if (chessboard[8, 2] == "q") h2r->Visible = true;
+			   if (chessboard[8, 3] == "q") h3r->Visible = true;
+			   if (chessboard[8, 4] == "q") h4r->Visible = true;
+			   if (chessboard[8, 5] == "q") h5r->Visible = true;
+			   if (chessboard[8, 6] == "q") h6r->Visible = true;
+			   if (chessboard[8, 7] == "q") h7r->Visible = true;
+			   if (chessboard[8, 8] == "q") h8r->Visible = true;
+		   }
 
-		   // New Game dialogue
-	private: System::Void NewGame_Click(System::Object^ sender, System::EventArgs^ e) {	// New Game dialogue
+		   void fillChessboard(array<String^, 2>^ ChessBoard)
+		   {
+			   if (A1->Visible == true) ChessBoard[1, 1] = "Q";
+			   if (A2->Visible == true) ChessBoard[1, 2] = "Q";
+			   if (A3->Visible == true) ChessBoard[1, 3] = "Q";
+			   if (A4->Visible == true) ChessBoard[1, 4] = "Q";
+			   if (A5->Visible == true) ChessBoard[1, 5] = "Q";
+			   if (A6->Visible == true) ChessBoard[1, 6] = "Q";
+			   if (A7->Visible == true) ChessBoard[1, 7] = "Q";
+			   if (A8->Visible == true) ChessBoard[1, 8] = "Q";
 
-		frown->Visible = true;
+			   if (B1->Visible == true) ChessBoard[2, 1] = "Q";
+			   if (B2->Visible == true) ChessBoard[2, 2] = "Q";
+			   if (B3->Visible == true) ChessBoard[2, 3] = "Q";
+			   if (B4->Visible == true) ChessBoard[2, 4] = "Q";
+			   if (B5->Visible == true) ChessBoard[2, 5] = "Q";
+			   if (B6->Visible == true) ChessBoard[2, 6] = "Q";
+			   if (B7->Visible == true) ChessBoard[2, 7] = "Q";
+			   if (B8->Visible == true) ChessBoard[2, 8] = "Q";
 
-		System::Media::SoundPlayer^ simpleSound = gcnew											// New Game dialogue
-			System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");							// New Game dialogue
-		simpleSound->Play();																	// New Game dialogue
+			   if (C1->Visible == true) ChessBoard[3, 1] = "Q";
+			   if (C2->Visible == true) ChessBoard[3, 2] = "Q";
+			   if (C3->Visible == true) ChessBoard[3, 3] = "Q";
+			   if (C4->Visible == true) ChessBoard[3, 4] = "Q";
+			   if (C5->Visible == true) ChessBoard[3, 5] = "Q";
+			   if (C6->Visible == true) ChessBoard[3, 6] = "Q";
+			   if (C7->Visible == true) ChessBoard[3, 7] = "Q";
+			   if (C8->Visible == true) ChessBoard[3, 8] = "Q";
 
-		MessageBox::Show(" !!! Why ??? Anyway A New Game will START NOW ..... ");		// New Game dialogue
+			   if (D1->Visible == true) ChessBoard[4, 1] = "Q";
+			   if (D2->Visible == true) ChessBoard[4, 2] = "Q";
+			   if (D3->Visible == true) ChessBoard[4, 3] = "Q";
+			   if (D4->Visible == true) ChessBoard[4, 4] = "Q";
+			   if (D5->Visible == true) ChessBoard[4, 5] = "Q";
+			   if (D6->Visible == true) ChessBoard[4, 6] = "Q";
+			   if (D7->Visible == true) ChessBoard[4, 7] = "Q";
+			   if (D8->Visible == true) ChessBoard[4, 8] = "Q";
 
+			   if (E1->Visible == true) ChessBoard[5, 1] = "Q";
+			   if (E2->Visible == true) ChessBoard[5, 2] = "Q";
+			   if (E3->Visible == true) ChessBoard[5, 3] = "Q";
+			   if (E4->Visible == true) ChessBoard[5, 4] = "Q";
+			   if (E5->Visible == true) ChessBoard[5, 5] = "Q";
+			   if (E6->Visible == true) ChessBoard[5, 6] = "Q";
+			   if (E7->Visible == true) ChessBoard[5, 7] = "Q";
+			   if (E8->Visible == true) ChessBoard[5, 8] = "Q";
 
+			   if (F1->Visible == true) ChessBoard[6, 1] = "Q";
+			   if (F2->Visible == true) ChessBoard[6, 2] = "Q";
+			   if (F3->Visible == true) ChessBoard[6, 3] = "Q";
+			   if (F4->Visible == true) ChessBoard[6, 4] = "Q";
+			   if (F5->Visible == true) ChessBoard[6, 5] = "Q";
+			   if (F6->Visible == true) ChessBoard[6, 6] = "Q";
+			   if (F7->Visible == true) ChessBoard[6, 7] = "Q";
+			   if (F8->Visible == true) ChessBoard[6, 8] = "Q";
 
-		// remove queens from chessboard
-		A1->Visible = false;		// remove queens from chessboard
-		A2->Visible = false;		// remove queens from chessboard
-		A3->Visible = false;		// remove queens from chessboard
-		A4->Visible = false;		// remove queens from chessboard
-		A5->Visible = false;		// remove queens from chessboard
-		A6->Visible = false;		// remove queens from chessboard
-		A7->Visible = false;		// remove queens from chessboard
-		A8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		B1->Visible = false;		// remove queens from chessboard
-		B2->Visible = false;		// remove queens from chessboard
-		B3->Visible = false;		// remove queens from chessboard
-		B4->Visible = false;		// remove queens from chessboard
-		B5->Visible = false;		// remove queens from chessboard
-		B6->Visible = false;		// remove queens from chessboard
-		B7->Visible = false;		// remove queens from chessboard
-		B8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		C1->Visible = false;		// remove queens from chessboard
-		C2->Visible = false;		// remove queens from chessboard
-		C3->Visible = false;		// remove queens from chessboard
-		C4->Visible = false;		// remove queens from chessboard
-		C5->Visible = false;		// remove queens from chessboard
-		C6->Visible = false;		// remove queens from chessboard
-		C7->Visible = false;		// remove queens from chessboard
-		C8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		D1->Visible = false;		// remove queens from chessboard
-		D2->Visible = false;		// remove queens from chessboard
-		D3->Visible = false;		// remove queens from chessboard
-		D4->Visible = false;		// remove queens from chessboard
-		D5->Visible = false;		// remove queens from chessboard
-		D6->Visible = false;		// remove queens from chessboard
-		D7->Visible = false;		// remove queens from chessboard
-		D8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		E1->Visible = false;		// remove queens from chessboard
-		E2->Visible = false;		// remove queens from chessboard
-		E3->Visible = false;		// remove queens from chessboard
-		E4->Visible = false;		// remove queens from chessboard
-		E5->Visible = false;		// remove queens from chessboard
-		E6->Visible = false;		// remove queens from chessboard
-		E7->Visible = false;		// remove queens from chessboard
-		E8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		F1->Visible = false;		// remove queens from chessboard
-		F2->Visible = false;		// remove queens from chessboard
-		F3->Visible = false;		// remove queens from chessboard
-		F4->Visible = false;		// remove queens from chessboard
-		F5->Visible = false;		// remove queens from chessboard
-		F6->Visible = false;		// remove queens from chessboard
-		F7->Visible = false;		// remove queens from chessboard
-		F8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		G1->Visible = false;		// remove queens from chessboard
-		G2->Visible = false;		// remove queens from chessboard
-		G3->Visible = false;		// remove queens from chessboard
-		G4->Visible = false;		// remove queens from chessboard
-		G5->Visible = false;		// remove queens from chessboard
-		G6->Visible = false;		// remove queens from chessboard
-		G7->Visible = false;		// remove queens from chessboard
-		G8->Visible = false;		// remove queens from chessboard
-		// remove queens from chessboard
-		H1->Visible = false;		// remove queens from chessboard
-		H2->Visible = false;		// remove queens from chessboard
-		H3->Visible = false;		// remove queens from chessboard
-		H4->Visible = false;		// remove queens from chessboard
-		H5->Visible = false;		// remove queens from chessboard
-		H6->Visible = false;		// remove queens from chessboard
-		H7->Visible = false;		// remove queens from chessboard
-		H8->Visible = false;		// remove queens from chessboard
+			   if (G1->Visible == true) ChessBoard[7, 1] = "Q";
+			   if (G2->Visible == true) ChessBoard[7, 2] = "Q";
+			   if (G3->Visible == true) ChessBoard[7, 3] = "Q";
+			   if (G4->Visible == true) ChessBoard[7, 4] = "Q";
+			   if (G5->Visible == true) ChessBoard[7, 5] = "Q";
+			   if (G6->Visible == true) ChessBoard[7, 6] = "Q";
+			   if (G7->Visible == true) ChessBoard[7, 7] = "Q";
+			   if (G8->Visible == true) ChessBoard[7, 8] = "Q";
 
-		smile->Visible = false;		// remove smile
-		frown->Visible = false;		// remove frown
-
-		numberOfQueens = 0;         //set up number of safe queens to 0
-
-
-	}
+			   if (H1->Visible == true) ChessBoard[8, 1] = "Q";
+			   if (H2->Visible == true) ChessBoard[8, 2] = "Q";
+			   if (H3->Visible == true) ChessBoard[8, 3] = "Q";
+			   if (H4->Visible == true) ChessBoard[8, 4] = "Q";
+			   if (H5->Visible == true) ChessBoard[8, 5] = "Q";
+			   if (H6->Visible == true) ChessBoard[8, 6] = "Q";
+			   if (H7->Visible == true) ChessBoard[8, 7] = "Q";
+			   if (H8->Visible == true) ChessBoard[8, 8] = "Q";
+		   }
 
 		   //Congratulation message function
-		   void congrat(char QueenNumber) {
-			   if (QueenNumber == 8)
-				   MessageBox::Show(" Congratulations! All 8 queens are safe");
-		   }
+	private: void congrat(char QueenNumber) {
+		if (QueenNumber == 8)
+			MessageBox::Show(" Congratulations! All 8 queens are safe");
+	}
 
 		   // queenposition function evaluates queens' positions on chessboard 
 		   char queenposition(char qX_shift, char qY_shift, array<String^, 2>^ Chess_Board)
@@ -2153,21 +3341,7 @@ namespace oudaAssignment2 {
 
 
 
-	private: System::Void exitButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		this->Close();
-
-
-
-
-	}
-
-	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
 
 	};
-
-
-
-
 }
