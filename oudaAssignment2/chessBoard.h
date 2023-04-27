@@ -274,6 +274,10 @@ namespace oudaAssignment2 {
 
 
 	private: System::ComponentModel::IContainer^ components;
+private: System::Windows::Forms::CheckBox^ hint;
+private: System::Windows::Forms::CheckBox^ help;
+
+
 
 
 
@@ -438,6 +442,8 @@ namespace oudaAssignment2 {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->labelscore = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->hint = (gcnew System::Windows::Forms::CheckBox());
+			this->help = (gcnew System::Windows::Forms::CheckBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->frown))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A8))->BeginInit();
@@ -1800,7 +1806,7 @@ namespace oudaAssignment2 {
 			// 
 			// EnterQueen
 			// 
-			this->EnterQueen->Location = System::Drawing::Point(558, 376);
+			this->EnterQueen->Location = System::Drawing::Point(558, 359);
 			this->EnterQueen->Name = L"EnterQueen";
 			this->EnterQueen->Size = System::Drawing::Size(102, 23);
 			this->EnterQueen->TabIndex = 297;
@@ -1842,48 +1848,6 @@ namespace oudaAssignment2 {
 			this->smile->TabIndex = 317;
 			this->smile->TabStop = false;
 			this->smile->Visible = false;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(583, 22);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(60, 24);
-			this->label2->TabIndex = 322;
-			this->label2->Text = L"Score";
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(558, 404);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(102, 23);
-			this->button1->TabIndex = 323;
-			this->button1->Text = L"Remove Queen";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &chessBoard::button1_Click);
-			// 
-			// labelscore
-			// 
-			this->labelscore->AutoSize = true;
-			this->labelscore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelscore->Location = System::Drawing::Point(583, 46);
-			this->labelscore->Name = L"labelscore";
-			this->labelscore->Size = System::Drawing::Size(21, 24);
-			this->labelscore->TabIndex = 324;
-			this->labelscore->Text = L"0";
-			// 
-			// button3
-			// 
-			this->button3->Location = System::Drawing::Point(559, 496);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(101, 25);
-			this->button3->TabIndex = 326;
-			this->button3->Text = L"Exit";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &chessBoard::button3_Click);
 			// 
 			// imageList1
 			// 
@@ -2595,11 +2559,76 @@ namespace oudaAssignment2 {
 			this->h1r->TabStop = false;
 			this->h1r->Visible = false;
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(583, 22);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(60, 24);
+			this->label2->TabIndex = 322;
+			this->label2->Text = L"Score";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(558, 387);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(102, 23);
+			this->button1->TabIndex = 323;
+			this->button1->Text = L"Remove Queen";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &chessBoard::button1_Click);
+			// 
+			// labelscore
+			// 
+			this->labelscore->AutoSize = true;
+			this->labelscore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelscore->Location = System::Drawing::Point(583, 46);
+			this->labelscore->Name = L"labelscore";
+			this->labelscore->Size = System::Drawing::Size(21, 24);
+			this->labelscore->TabIndex = 324;
+			this->labelscore->Text = L"0";
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(559, 496);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(101, 25);
+			this->button3->TabIndex = 326;
+			this->button3->Text = L"Exit";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &chessBoard::button3_Click);
+			// 
+			// hint
+			// 
+			this->hint->AutoSize = true;
+			this->hint->Location = System::Drawing::Point(558, 420);
+			this->hint->Name = L"hint";
+			this->hint->Size = System::Drawing::Size(48, 17);
+			this->hint->TabIndex = 390;
+			this->hint->Text = L"hints";
+			this->hint->UseVisualStyleBackColor = true;
+			this->hint->CheckedChanged += gcnew System::EventHandler(this, &chessBoard::hint_CheckedChanged);
+			// 
+			// help
+			// 
+			this->help->AutoSize = true;
+			this->help->Location = System::Drawing::Point(558, 443);
+			this->help->Name = L"help";
+			this->help->Size = System::Drawing::Size(46, 17);
+			this->help->TabIndex = 391;
+			this->help->Text = L"help";
+			this->help->UseVisualStyleBackColor = true;
+			// 
 			// chessBoard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(710, 575);
+			this->Controls->Add(this->help);
+			this->Controls->Add(this->hint);
 			this->Controls->Add(this->h1r);
 			this->Controls->Add(this->f1r);
 			this->Controls->Add(this->d1r);
@@ -3226,6 +3255,9 @@ namespace oudaAssignment2 {
 
 		   void ShowBullets(array<String^, 2>^ chessboard)
 		   {
+			   if (!hint->Checked)
+				   return;
+
 			   if (chessboard[1, 1] == "q") a1r->Visible = true;
 			   if (chessboard[1, 2] == "q") a2r->Visible = true;
 			   if (chessboard[1, 3] == "q") a3r->Visible = true;
@@ -3856,7 +3888,23 @@ namespace oudaAssignment2 {
 			   timer = Stopwatch::StartNew();
 			   ClearBullets();
 		   }
-	};
+private: System::Void hint_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	ClearBullets();
+	array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
+	fillChessboard(ChessBoard);
+	for (char xi = 1; xi < 9; xi++)
+	{
+		for (char yj = 1; yj < 9; yj++)
+		{
+			if (ChessBoard[xi, yj] == "Q")
+			{
+				queenposition(xi, yj, ChessBoard);
+			}
+		}
+	}
+	ShowBullets(ChessBoard);
+}
+};
 
 
 
