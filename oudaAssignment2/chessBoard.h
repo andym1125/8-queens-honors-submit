@@ -1,23 +1,24 @@
 #pragma once
-#include <optional>
-#include <optional>
-
-
+#include"score.h"
+#include "enterScore.h"
+#include <iostream>
 namespace oudaAssignment2 {
+
 	using namespace System;
+	using namespace System::Diagnostics;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
-	//added to the display board edition
+	using namespace System::Text::RegularExpressions;
 	using namespace System::IO;
 	using namespace System::Media;
 
 	/// <summary>
 	/// Summary for chessBoard
 	/// </summary>
+
 
 	public ref class chessBoard : public System::Windows::Forms::Form
 	{
@@ -28,6 +29,7 @@ namespace oudaAssignment2 {
 			//
 			//TODO: Add the constructor code here
 			//
+			timer = Stopwatch::StartNew();
 		}
 
 	protected:
@@ -121,10 +123,9 @@ namespace oudaAssignment2 {
 	public: System::Windows::Forms::PictureBox^ pictureBox1;
 	private:
 	private: System::Windows::Forms::PictureBox^ smile;
-	private: System::Windows::Forms::Button^ exitButton;
-	private: System::Windows::Forms::Button^ removeGueenButton;
-	private: System::Windows::Forms::Label^ scoreLabel;
-	private: System::Windows::Forms::Label^ scoreValue;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Label^ labelscore;
 
 
 
@@ -276,6 +277,7 @@ namespace oudaAssignment2 {
 
 
 
+	private: System::Windows::Forms::Button^ button3;
 	public:
 
 	private:
@@ -367,10 +369,6 @@ namespace oudaAssignment2 {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->smile = (gcnew System::Windows::Forms::PictureBox());
-			this->exitButton = (gcnew System::Windows::Forms::Button());
-			this->removeGueenButton = (gcnew System::Windows::Forms::Button());
-			this->scoreLabel = (gcnew System::Windows::Forms::Label());
-			this->scoreValue = (gcnew System::Windows::Forms::Label());
 			this->imageList1 = (gcnew System::Windows::Forms::ImageList(this->components));
 			this->f8r = (gcnew System::Windows::Forms::PictureBox());
 			this->d8r = (gcnew System::Windows::Forms::PictureBox());
@@ -436,6 +434,10 @@ namespace oudaAssignment2 {
 			this->d1r = (gcnew System::Windows::Forms::PictureBox());
 			this->f1r = (gcnew System::Windows::Forms::PictureBox());
 			this->h1r = (gcnew System::Windows::Forms::PictureBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->labelscore = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->frown))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A8))->BeginInit();
@@ -615,9 +617,9 @@ namespace oudaAssignment2 {
 			// 
 			// NewGame
 			// 
-			this->NewGame->Location = System::Drawing::Point(558, 478);
+			this->NewGame->Location = System::Drawing::Point(558, 466);
 			this->NewGame->Name = L"NewGame";
-			this->NewGame->Size = System::Drawing::Size(100, 24);
+			this->NewGame->Size = System::Drawing::Size(102, 24);
 			this->NewGame->TabIndex = 316;
 			this->NewGame->Text = L"NewGame";
 			this->NewGame->UseVisualStyleBackColor = true;
@@ -1798,9 +1800,9 @@ namespace oudaAssignment2 {
 			// 
 			// EnterQueen
 			// 
-			this->EnterQueen->Location = System::Drawing::Point(558, 394);
+			this->EnterQueen->Location = System::Drawing::Point(558, 376);
 			this->EnterQueen->Name = L"EnterQueen";
-			this->EnterQueen->Size = System::Drawing::Size(100, 23);
+			this->EnterQueen->Size = System::Drawing::Size(102, 23);
 			this->EnterQueen->TabIndex = 297;
 			this->EnterQueen->Text = L"Enter Queen";
 			this->EnterQueen->UseVisualStyleBackColor = true;
@@ -1810,7 +1812,7 @@ namespace oudaAssignment2 {
 			// 
 			this->textBox1->Location = System::Drawing::Point(558, 327);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->Size = System::Drawing::Size(88, 20);
 			this->textBox1->TabIndex = 295;
 			// 
 			// pictureBox1
@@ -1828,6 +1830,7 @@ namespace oudaAssignment2 {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 248;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->DoubleClick += gcnew System::EventHandler(this, &chessBoard::pictureBox1_DoubleClick);
 			// 
 			// smile
 			// 
@@ -1840,47 +1843,47 @@ namespace oudaAssignment2 {
 			this->smile->TabStop = false;
 			this->smile->Visible = false;
 			// 
-			// exitButton
+			// label2
 			// 
-			this->exitButton->Location = System::Drawing::Point(558, 513);
-			this->exitButton->Name = L"exitButton";
-			this->exitButton->Size = System::Drawing::Size(100, 24);
-			this->exitButton->TabIndex = 322;
-			this->exitButton->Text = L"Exit";
-			this->exitButton->UseVisualStyleBackColor = true;
-			this->exitButton->Click += gcnew System::EventHandler(this, &chessBoard::exitButton_Click);
-			// 
-			// removeGueenButton
-			// 
-			this->removeGueenButton->Location = System::Drawing::Point(558, 424);
-			this->removeGueenButton->Name = L"removeGueenButton";
-			this->removeGueenButton->Size = System::Drawing::Size(100, 23);
-			this->removeGueenButton->TabIndex = 323;
-			this->removeGueenButton->Text = L"Remove Queen";
-			this->removeGueenButton->UseVisualStyleBackColor = true;
-			// 
-			// scoreLabel
-			// 
-			this->scoreLabel->AutoSize = true;
-			this->scoreLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->scoreLabel->Location = System::Drawing::Point(583, 9);
-			this->scoreLabel->Name = L"scoreLabel";
-			this->scoreLabel->Size = System::Drawing::Size(60, 24);
-			this->scoreLabel->TabIndex = 324;
-			this->scoreLabel->Text = L"Score";
+			this->label2->Location = System::Drawing::Point(583, 22);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(60, 24);
+			this->label2->TabIndex = 322;
+			this->label2->Text = L"Score";
 			// 
-			// scoreValue
+			// button1
 			// 
-			this->scoreValue->AutoSize = true;
-			this->scoreValue->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Location = System::Drawing::Point(558, 404);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(102, 23);
+			this->button1->TabIndex = 323;
+			this->button1->Text = L"Remove Queen";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &chessBoard::button1_Click);
+			// 
+			// labelscore
+			// 
+			this->labelscore->AutoSize = true;
+			this->labelscore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->scoreValue->Location = System::Drawing::Point(583, 47);
-			this->scoreValue->Name = L"scoreValue";
-			this->scoreValue->Size = System::Drawing::Size(20, 24);
-			this->scoreValue->TabIndex = 325;
-			this->scoreValue->Text = L"0";
-			this->scoreValue->TextAlign = System::Drawing::ContentAlignment::BottomRight;
+			this->labelscore->Location = System::Drawing::Point(583, 46);
+			this->labelscore->Name = L"labelscore";
+			this->labelscore->Size = System::Drawing::Size(21, 24);
+			this->labelscore->TabIndex = 324;
+			this->labelscore->Text = L"0";
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(559, 496);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(101, 25);
+			this->button3->TabIndex = 326;
+			this->button3->Text = L"Exit";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &chessBoard::button3_Click);
 			// 
 			// imageList1
 			// 
@@ -2661,10 +2664,10 @@ namespace oudaAssignment2 {
 			this->Controls->Add(this->b8r);
 			this->Controls->Add(this->d8r);
 			this->Controls->Add(this->f8r);
-			this->Controls->Add(this->scoreValue);
-			this->Controls->Add(this->scoreLabel);
-			this->Controls->Add(this->removeGueenButton);
-			this->Controls->Add(this->exitButton);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->labelscore);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label13);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
@@ -2883,7 +2886,14 @@ namespace oudaAssignment2 {
 		// added to the display board edition
 
 		//global variable to count number of safe queens entered
-		char numberOfQueens = 0;
+	public: char numberOfQueens = 0;
+
+		  //global var for score
+		  Int32 score = 0;
+		  Int32 penalty = 0;
+		  //time
+		  Diagnostics::Stopwatch^ timer;
+		  Int32 sec;
 
 	private: virtual System::Void EnterQueen_Click(System::Object^ sender, System::EventArgs^ e) sealed {
 
@@ -2892,19 +2902,15 @@ namespace oudaAssignment2 {
 		//set up ChessBoard array - used to calculate queens' "star" positions
 		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
 
-		fillChessboard(ChessBoard);
-		
 		//queen position input through GUI
 		String^ queenINPUT = textBox1->Text;
 		String^ QUEENinput = queenINPUT->ToUpper();
 		PictureBox^ queenBox = ShowQueens(QUEENinput);
 		if (queenBox == Empty)
 			return;
-		queenBox->Visible = true;
+		
 
 		fillChessboard(ChessBoard);
-
-		// assignment of "q" to ChessBoard fields fired by queens - queens' "stars"
 		for (char xi = 1; xi < 9; xi++)
 		{
 			for (char yj = 1; yj < 9; yj++)
@@ -2920,139 +2926,229 @@ namespace oudaAssignment2 {
 
 
 		//conversion of current queen coordinates string^->char
-		if (QUEENinput->Substring(0, 1) == "A") CurrentQX = 1;
-		if (QUEENinput->Substring(0, 1) == "B") CurrentQX = 2;
-		if (QUEENinput->Substring(0, 1) == "C") CurrentQX = 3;
-		if (QUEENinput->Substring(0, 1) == "D") CurrentQX = 4;
-		if (QUEENinput->Substring(0, 1) == "E") CurrentQX = 5;
-		if (QUEENinput->Substring(0, 1) == "F") CurrentQX = 6;
-		if (QUEENinput->Substring(0, 1) == "G") CurrentQX = 7;
-		if (QUEENinput->Substring(0, 1) == "H") CurrentQX = 8;
+		{
+			if (QUEENinput->Substring(0, 1) == "A") CurrentQX = 1;
+			if (QUEENinput->Substring(0, 1) == "B") CurrentQX = 2;
+			if (QUEENinput->Substring(0, 1) == "C") CurrentQX = 3;
+			if (QUEENinput->Substring(0, 1) == "D") CurrentQX = 4;
+			if (QUEENinput->Substring(0, 1) == "E") CurrentQX = 5;
+			if (QUEENinput->Substring(0, 1) == "F") CurrentQX = 6;
+			if (QUEENinput->Substring(0, 1) == "G") CurrentQX = 7;
+			if (QUEENinput->Substring(0, 1) == "H") CurrentQX = 8;
 
-		if (QUEENinput->Substring(1, 1) == "1") CurrentQY = 1;
-		if (QUEENinput->Substring(1, 1) == "2") CurrentQY = 2;
-		if (QUEENinput->Substring(1, 1) == "3") CurrentQY = 3;
-		if (QUEENinput->Substring(1, 1) == "4") CurrentQY = 4;
-		if (QUEENinput->Substring(1, 1) == "5") CurrentQY = 5;
-		if (QUEENinput->Substring(1, 1) == "6") CurrentQY = 6;
-		if (QUEENinput->Substring(1, 1) == "7") CurrentQY = 7;
-		if (QUEENinput->Substring(1, 1) == "8") CurrentQY = 8;
+			if (QUEENinput->Substring(1, 1) == "1") CurrentQY = 1;
+			if (QUEENinput->Substring(1, 1) == "2") CurrentQY = 2;
+			if (QUEENinput->Substring(1, 1) == "3") CurrentQY = 3;
+			if (QUEENinput->Substring(1, 1) == "4") CurrentQY = 4;
+			if (QUEENinput->Substring(1, 1) == "5") CurrentQY = 5;
+			if (QUEENinput->Substring(1, 1) == "6") CurrentQY = 6;
+			if (QUEENinput->Substring(1, 1) == "7") CurrentQY = 7;
+			if (QUEENinput->Substring(1, 1) == "8") CurrentQY = 8;
+		}
 
-
+		
 
 		//making "frown" if queen's position is bad or "smile" if  queen's position is good
-		if (ChessBoard[CurrentQX, CurrentQY] == "q" /* || ChessBoard[CurrentQX, CurrentQY] == "Q"*/)
+		if (ChessBoard[CurrentQX, CurrentQY] == "q" || ChessBoard[CurrentQX, CurrentQY] == "Q")
 		{
-			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
+
+			System::Media::SoundPlayer^ simpleSound = gcnew
+				System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
 			simpleSound->Play();
+			score -= 50;
+			penalty++;
+			labelscore->Text = score + "";
 			frown->Visible = true;
+
 		}
 		else
 		{
-			System::Media::SoundPlayer^ simpleSound = gcnew System::Media::SoundPlayer("c:\\windows\\media\\tada.wav");
+			System::Media::SoundPlayer^ simpleSound = gcnew
+				System::Media::SoundPlayer("c:\\windows\\media\\tada.wav");
 			simpleSound->Play();
+			score += 100;
+			labelscore->Text = score + "";
 			smile->Visible = true;
-			numberOfQueens++;
+			numberOfQueens = numberOfQueens + 1;
+			//making queens' pictures visible
+			
+			{
+				if (A1->Name == QUEENinput)  A1->Visible = true;
+				else if (A2->Name == QUEENinput)  A2->Visible = true;
+				else if (A3->Name == QUEENinput)  A3->Visible = true;
+				else if (A4->Name == QUEENinput)  A4->Visible = true;
+				else if (A5->Name == QUEENinput)  A5->Visible = true;
+				else if (A6->Name == QUEENinput)  A6->Visible = true;
+				else if (A7->Name == QUEENinput)  A7->Visible = true;
+				else if (A8->Name == QUEENinput)  A8->Visible = true;
+				else if (B1->Name == QUEENinput)  B1->Visible = true;
+				else if (B2->Name == QUEENinput)  B2->Visible = true;
+				else if (B3->Name == QUEENinput)  B3->Visible = true;
+				else if (B4->Name == QUEENinput)  B4->Visible = true;
+				else if (B5->Name == QUEENinput)  B5->Visible = true;
+				else if (B6->Name == QUEENinput)  B6->Visible = true;
+				else if (B7->Name == QUEENinput)  B7->Visible = true;
+				else if (B8->Name == QUEENinput)  B8->Visible = true;
+				else if (C1->Name == QUEENinput)  C1->Visible = true;
+				else if (C2->Name == QUEENinput)  C2->Visible = true;
+				else if (C3->Name == QUEENinput)  C3->Visible = true;
+				else if (C4->Name == QUEENinput)  C4->Visible = true;
+				else if (C5->Name == QUEENinput)  C5->Visible = true;
+				else if (C6->Name == QUEENinput)  C6->Visible = true;
+				else if (C7->Name == QUEENinput)  C7->Visible = true;
+				else if (C8->Name == QUEENinput)  C8->Visible = true;
+				else if (D1->Name == QUEENinput)  D1->Visible = true;
+				else if (D2->Name == QUEENinput)  D2->Visible = true;
+				else if (D3->Name == QUEENinput)  D3->Visible = true;
+				else if (D4->Name == QUEENinput)  D4->Visible = true;
+				else if (D5->Name == QUEENinput)  D5->Visible = true;
+				else if (D6->Name == QUEENinput)  D6->Visible = true;
+				else if (D7->Name == QUEENinput)  D7->Visible = true;
+				else if (D8->Name == QUEENinput)  D8->Visible = true;
+				else if (E1->Name == QUEENinput)  E1->Visible = true;
+				else if (E2->Name == QUEENinput)  E2->Visible = true;
+				else if (E3->Name == QUEENinput)  E3->Visible = true;
+				else if (E4->Name == QUEENinput)  E4->Visible = true;
+				else if (E5->Name == QUEENinput)  E5->Visible = true;
+				else if (E6->Name == QUEENinput)  E6->Visible = true;
+				else if (E7->Name == QUEENinput)  E7->Visible = true;
+				else if (E8->Name == QUEENinput)  E8->Visible = true;
+				else if (F1->Name == QUEENinput)  F1->Visible = true;
+				else if (F2->Name == QUEENinput)  F2->Visible = true;
+				else if (F3->Name == QUEENinput)  F3->Visible = true;
+				else if (F4->Name == QUEENinput)  F4->Visible = true;
+				else if (F5->Name == QUEENinput)  F5->Visible = true;
+				else if (F6->Name == QUEENinput)  F6->Visible = true;
+				else if (F7->Name == QUEENinput)  F7->Visible = true;
+				else if (F8->Name == QUEENinput)  F8->Visible = true;
+				else if (G1->Name == QUEENinput)  G1->Visible = true;
+				else if (G2->Name == QUEENinput)  G2->Visible = true;
+				else if (G3->Name == QUEENinput)  G3->Visible = true;
+				else if (G4->Name == QUEENinput)  G4->Visible = true;
+				else if (G5->Name == QUEENinput)  G5->Visible = true;
+				else if (G6->Name == QUEENinput)  G6->Visible = true;
+				else if (G7->Name == QUEENinput)  G7->Visible = true;
+				else if (G8->Name == QUEENinput)  G8->Visible = true;
+				else if (H1->Name == QUEENinput)  H1->Visible = true;
+				else if (H2->Name == QUEENinput)  H2->Visible = true;
+				else if (H3->Name == QUEENinput)  H3->Visible = true;
+				else if (H4->Name == QUEENinput)  H4->Visible = true;
+				else if (H5->Name == QUEENinput)  H5->Visible = true;
+				else if (H6->Name == QUEENinput)  H6->Visible = true;
+				else if (H7->Name == QUEENinput)  H7->Visible = true;
+				else if (H8->Name == QUEENinput)  H8->Visible = true;
+			}
+
+
 			congrat(numberOfQueens);
 		}
+		ClearBullets();
+		queenBox->Visible = true;
+		ChessBoard[CurrentQX, CurrentQY] = "Q";
+		ShowQueens(QUEENinput);
+		queenposition(CurrentQX, CurrentQY, ChessBoard);
+		ShowBullets(ChessBoard);
 	}
 
-		   System::Void exitButton_Click(System::Object^ sender, System::EventArgs^ e) {
-			   this->Close();
-		   }
-
-		   System::Void NewGame_Click(System::Object^ sender, System::EventArgs^ e) {	// New Game dialogue
-
-			   frown->Visible = true;
-
-			   System::Media::SoundPlayer^ simpleSound = gcnew											// New Game dialogue
-				   System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");							// New Game dialogue
-			   simpleSound->Play();																	// New Game dialogue
-
-			   MessageBox::Show(" !!! Why ??? Anyway A New Game will START NOW ..... ");		// New Game dialogue
 
 
-
-			   // remove queens from chessboard
-			   A1->Visible = false;		// remove queens from chessboard
-			   A2->Visible = false;		// remove queens from chessboard
-			   A3->Visible = false;		// remove queens from chessboard
-			   A4->Visible = false;		// remove queens from chessboard
-			   A5->Visible = false;		// remove queens from chessboard
-			   A6->Visible = false;		// remove queens from chessboard
-			   A7->Visible = false;		// remove queens from chessboard
-			   A8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   B1->Visible = false;		// remove queens from chessboard
-			   B2->Visible = false;		// remove queens from chessboard
-			   B3->Visible = false;		// remove queens from chessboard
-			   B4->Visible = false;		// remove queens from chessboard
-			   B5->Visible = false;		// remove queens from chessboard
-			   B6->Visible = false;		// remove queens from chessboard
-			   B7->Visible = false;		// remove queens from chessboard
-			   B8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   C1->Visible = false;		// remove queens from chessboard
-			   C2->Visible = false;		// remove queens from chessboard
-			   C3->Visible = false;		// remove queens from chessboard
-			   C4->Visible = false;		// remove queens from chessboard
-			   C5->Visible = false;		// remove queens from chessboard
-			   C6->Visible = false;		// remove queens from chessboard
-			   C7->Visible = false;		// remove queens from chessboard
-			   C8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   D1->Visible = false;		// remove queens from chessboard
-			   D2->Visible = false;		// remove queens from chessboard
-			   D3->Visible = false;		// remove queens from chessboard
-			   D4->Visible = false;		// remove queens from chessboard
-			   D5->Visible = false;		// remove queens from chessboard
-			   D6->Visible = false;		// remove queens from chessboard
-			   D7->Visible = false;		// remove queens from chessboard
-			   D8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   E1->Visible = false;		// remove queens from chessboard
-			   E2->Visible = false;		// remove queens from chessboard
-			   E3->Visible = false;		// remove queens from chessboard
-			   E4->Visible = false;		// remove queens from chessboard
-			   E5->Visible = false;		// remove queens from chessboard
-			   E6->Visible = false;		// remove queens from chessboard
-			   E7->Visible = false;		// remove queens from chessboard
-			   E8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   F1->Visible = false;		// remove queens from chessboard
-			   F2->Visible = false;		// remove queens from chessboard
-			   F3->Visible = false;		// remove queens from chessboard
-			   F4->Visible = false;		// remove queens from chessboard
-			   F5->Visible = false;		// remove queens from chessboard
-			   F6->Visible = false;		// remove queens from chessboard
-			   F7->Visible = false;		// remove queens from chessboard
-			   F8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   G1->Visible = false;		// remove queens from chessboard
-			   G2->Visible = false;		// remove queens from chessboard
-			   G3->Visible = false;		// remove queens from chessboard
-			   G4->Visible = false;		// remove queens from chessboard
-			   G5->Visible = false;		// remove queens from chessboard
-			   G6->Visible = false;		// remove queens from chessboard
-			   G7->Visible = false;		// remove queens from chessboard
-			   G8->Visible = false;		// remove queens from chessboard
-			   // remove queens from chessboard
-			   H1->Visible = false;		// remove queens from chessboard
-			   H2->Visible = false;		// remove queens from chessboard
-			   H3->Visible = false;		// remove queens from chessboard
-			   H4->Visible = false;		// remove queens from chessboard
-			   H5->Visible = false;		// remove queens from chessboard
-			   H6->Visible = false;		// remove queens from chessboard
-			   H7->Visible = false;		// remove queens from chessboard
-			   H8->Visible = false;		// remove queens from chessboard
-
-			   smile->Visible = false;		// remove smile
-			   frown->Visible = false;		// remove frown
-
-			   numberOfQueens = 0;         //set up number of safe queens to 0
+		   // New Game dialogue
+	private: System::Void NewGame_Click(System::Object^ sender, System::EventArgs^ e) {	// New Game dialogue
+		//end timer
+		timer->Stop();
 
 
-		   }
+		frown->Visible = true;
+		System::Media::SoundPlayer^ simpleSound = gcnew
+			System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
+		simpleSound->Play();
+		if (in_highscore())
+			add_score(" !!! Why ??? Anyway A New Game will START NOW ..... ");
+		else
+			MessageBox::Show(" !!! Why ??? Anyway A New Game will START NOW ..... ");		// New Game dialogue
+		{
+			A1->Visible = false;		// remove queens from chessboard
+			A2->Visible = false;		// remove queens from chessboard
+			A3->Visible = false;		// remove queens from chessboard
+			A4->Visible = false;		// remove queens from chessboard
+			A5->Visible = false;		// remove queens from chessboard
+			A6->Visible = false;		// remove queens from chessboard
+			A7->Visible = false;		// remove queens from chessboard
+			A8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			B1->Visible = false;		// remove queens from chessboard
+			B2->Visible = false;		// remove queens from chessboard
+			B3->Visible = false;		// remove queens from chessboard
+			B4->Visible = false;		// remove queens from chessboard
+			B5->Visible = false;		// remove queens from chessboard
+			B6->Visible = false;		// remove queens from chessboard
+			B7->Visible = false;		// remove queens from chessboard
+			B8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			C1->Visible = false;		// remove queens from chessboard
+			C2->Visible = false;		// remove queens from chessboard
+			C3->Visible = false;		// remove queens from chessboard
+			C4->Visible = false;		// remove queens from chessboard
+			C5->Visible = false;		// remove queens from chessboard
+			C6->Visible = false;		// remove queens from chessboard
+			C7->Visible = false;		// remove queens from chessboard
+			C8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			D1->Visible = false;		// remove queens from chessboard
+			D2->Visible = false;		// remove queens from chessboard
+			D3->Visible = false;		// remove queens from chessboard
+			D4->Visible = false;		// remove queens from chessboard
+			D5->Visible = false;		// remove queens from chessboard
+			D6->Visible = false;		// remove queens from chessboard
+			D7->Visible = false;		// remove queens from chessboard
+			D8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			E1->Visible = false;		// remove queens from chessboard
+			E2->Visible = false;		// remove queens from chessboard
+			E3->Visible = false;		// remove queens from chessboard
+			E4->Visible = false;		// remove queens from chessboard
+			E5->Visible = false;		// remove queens from chessboard
+			E6->Visible = false;		// remove queens from chessboard
+			E7->Visible = false;		// remove queens from chessboard
+			E8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			F1->Visible = false;		// remove queens from chessboard
+			F2->Visible = false;		// remove queens from chessboard
+			F3->Visible = false;		// remove queens from chessboard
+			F4->Visible = false;		// remove queens from chessboard
+			F5->Visible = false;		// remove queens from chessboard
+			F6->Visible = false;		// remove queens from chessboard
+			F7->Visible = false;		// remove queens from chessboard
+			F8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			G1->Visible = false;		// remove queens from chessboard
+			G2->Visible = false;		// remove queens from chessboard
+			G3->Visible = false;		// remove queens from chessboard
+			G4->Visible = false;		// remove queens from chessboard
+			G5->Visible = false;		// remove queens from chessboard
+			G6->Visible = false;		// remove queens from chessboard
+			G7->Visible = false;		// remove queens from chessboard
+			G8->Visible = false;		// remove queens from chessboard
+			// remove queens from chessboard
+			H1->Visible = false;		// remove queens from chessboard
+			H2->Visible = false;		// remove queens from chessboard
+			H3->Visible = false;		// remove queens from chessboard
+			H4->Visible = false;		// remove queens from chessboard
+			H5->Visible = false;		// remove queens from chessboard
+			H6->Visible = false;		// remove queens from chessboard
+			H7->Visible = false;		// remove queens from chessboard
+			H8->Visible = false;		// remove queens from chessboard
+		}
+		smile->Visible = false;		// remove smile
+		frown->Visible = false;		// remove frown
+
+		numberOfQueens = 0;         //set up number of safe queens to 0
+		score = 0;
+		penalty = 0;
+		timer = Stopwatch::StartNew();
+
+		clearboard();
+	}
 
 		   // Make the given Queen visible, and return false if the input was invalid
 	private: PictureBox^ ShowQueens(String^ QUEENinput)
@@ -3196,6 +3292,74 @@ namespace oudaAssignment2 {
 			   if (chessboard[8, 8] == "q") h8r->Visible = true;
 		   }
 
+		   void ClearBullets()
+		   {
+			   a1r->Visible = false;
+			   a2r->Visible = false;
+			   a3r->Visible = false;
+			   a4r->Visible = false;
+			   a5r->Visible = false;
+			   a6r->Visible = false;
+			   a7r->Visible = false;
+			   a8r->Visible = false;
+			   b1r->Visible = false;
+			   b2r->Visible = false;
+			   b3r->Visible = false;
+			   b4r->Visible = false;
+			   b5r->Visible = false;
+			   b6r->Visible = false;
+			   b7r->Visible = false;
+			   b8r->Visible = false;
+			   c1r->Visible = false;
+			   c2r->Visible = false;
+			   c3r->Visible = false;
+			   c4r->Visible = false;
+			   c5r->Visible = false;
+			   c6r->Visible = false;
+			   c7r->Visible = false;
+			   c8r->Visible = false;
+			   d1r->Visible = false;
+			   d2r->Visible = false;
+			   d3r->Visible = false;
+			   d4r->Visible = false;
+			   d5r->Visible = false;
+			   d6r->Visible = false;
+			   d7r->Visible = false;
+			   d8r->Visible = false;
+			   e1r->Visible = false;
+			   e2r->Visible = false;
+			   e3r->Visible = false;
+			   e4r->Visible = false;
+			   e5r->Visible = false;
+			   e6r->Visible = false;
+			   e7r->Visible = false;
+			   e8r->Visible = false;
+			   f1r->Visible = false;
+			   f2r->Visible = false;
+			   f3r->Visible = false;
+			   f4r->Visible = false;
+			   f5r->Visible = false;
+			   f6r->Visible = false;
+			   f7r->Visible = false;
+			   f8r->Visible = false;
+			   g1r->Visible = false;
+			   g2r->Visible = false;
+			   g3r->Visible = false;
+			   g4r->Visible = false;
+			   g5r->Visible = false;
+			   g6r->Visible = false;
+			   g7r->Visible = false;
+			   g8r->Visible = false;
+			   h1r->Visible = false;
+			   h2r->Visible = false;
+			   h3r->Visible = false;
+			   h4r->Visible = false;
+			   h5r->Visible = false;
+			   h6r->Visible = false;
+			   h7r->Visible = false;
+			   h8r->Visible = false;
+		   }
+
 		   void fillChessboard(array<String^, 2>^ ChessBoard)
 		   {
 			   if (A1->Visible == true) ChessBoard[1, 1] = "Q";
@@ -3272,10 +3436,18 @@ namespace oudaAssignment2 {
 		   }
 
 		   //Congratulation message function
-	private: void congrat(char QueenNumber) {
-		if (QueenNumber == 8)
-			MessageBox::Show(" Congratulations! All 8 queens are safe");
-	}
+		   void congrat(char QueenNumber) {
+			   //add to highscore if needed
+			   if (QueenNumber == 8 && in_highscore()) {
+				   add_score(" Congratulations! All 8 queens are safe");
+				   clearboard();
+			   }
+			   else if (QueenNumber == 8) {
+				   MessageBox::Show(" Congratulations! All 8 queens are safe");
+				   clearboard();
+			   }
+
+		   }
 
 		   // queenposition function evaluates queens' positions on chessboard 
 		   char queenposition(char qX_shift, char qY_shift, array<String^, 2>^ Chess_Board)
@@ -3334,14 +3506,359 @@ namespace oudaAssignment2 {
 				   if (Chess_Board[xnew, ynew] != "Q") Chess_Board[xnew, ynew] = "q";
 				   if ((xnew == 8) || (ynew == 1)) break;
 			   }
-
-
 			   return 0;
 		   }
 
 
+		   //double click to add queen		
+	private: System::Void pictureBox1_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
+		//array to make it easy to index chess pieces
+		array<array<PictureBox^>^>^ chesslist = gcnew array<array<PictureBox^>^>{
+			gcnew array<PictureBox^>{A8, A7, A6, A5, A4, A3, A2, A1},
+				gcnew array<PictureBox^>{B8, B7, B6, B5, B4, B3, B2, B1},
+				gcnew array<PictureBox^>{C8, C7, C6, C5, C4, C3, C2, C1},
+				gcnew array<PictureBox^>{D8, D7, D6, D5, D4, D3, D2, D1},
+				gcnew array<PictureBox^>{E8, E7, E6, E5, E4, E3, E2, E1},
+				gcnew array<PictureBox^>{F8, F7, F6, F5, F4, F3, F2, F1},
+				gcnew array<PictureBox^>{G8, G7, G6, G5, G4, G3, G2, G1},
+				gcnew array<PictureBox^>{H8, H7, H6, H5, H4, H3, H2, H1}
+		};
+		//get x y relative to chess board
+		auto mouse = Cursor->Current;
+		auto relativePoint = this->PointToClient(mouse->Position);
+		auto x = (relativePoint.X - 63) / 55;
+		auto y = (relativePoint.Y - 67) / 55;
+		if (is_queen_valid(x + 1, 8 - y))//modfiy x,y due to different chessboard array setups (top-left to bot-right) to (bot-left to top-right)
+		{
+			chesslist[x][y]->Visible = true;
+			System::Media::SoundPlayer^ simpleSound = gcnew
+				System::Media::SoundPlayer("c:\\windows\\media\\tada.wav");
+			simpleSound->Play();
+			smile->Visible = true;
+			numberOfQueens = numberOfQueens + 1;
+
+			score += 100;
+			labelscore->Text = score + "";
+			congrat(numberOfQueens);
+		}
+		else
+		{
+			System::Media::SoundPlayer^ simpleSound = gcnew
+				System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
+			simpleSound->Play();
+			if (score >= 50)
+				score -= 50;
+			penalty++;
+			labelscore->Text = score + "";
+			frown->Visible = true;
+		}
+	}
+		   //check if queen is in a valid position
+	private: bool is_queen_valid(int CurrentQX, int CurrentQY)
+	{
+		char qXshift, qYshift;
+		//set up ChessBoard array - used to calculate queens' "star" positions
+		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
+
+		//copying queens' positions from GUI chessboard to ChessBoard array
+		{
+			if (A1->Visible == true) ChessBoard[1, 1] = "Q";
+			if (A2->Visible == true) ChessBoard[1, 2] = "Q";
+			if (A3->Visible == true) ChessBoard[1, 3] = "Q";
+			if (A4->Visible == true) ChessBoard[1, 4] = "Q";
+			if (A5->Visible == true) ChessBoard[1, 5] = "Q";
+			if (A6->Visible == true) ChessBoard[1, 6] = "Q";
+			if (A7->Visible == true) ChessBoard[1, 7] = "Q";
+			if (A8->Visible == true) ChessBoard[1, 8] = "Q";
+
+			if (B1->Visible == true) ChessBoard[2, 1] = "Q";
+			if (B2->Visible == true) ChessBoard[2, 2] = "Q";
+			if (B3->Visible == true) ChessBoard[2, 3] = "Q";
+			if (B4->Visible == true) ChessBoard[2, 4] = "Q";
+			if (B5->Visible == true) ChessBoard[2, 5] = "Q";
+			if (B6->Visible == true) ChessBoard[2, 6] = "Q";
+			if (B7->Visible == true) ChessBoard[2, 7] = "Q";
+			if (B8->Visible == true) ChessBoard[2, 8] = "Q";
+
+			if (C1->Visible == true) ChessBoard[3, 1] = "Q";
+			if (C2->Visible == true) ChessBoard[3, 2] = "Q";
+			if (C3->Visible == true) ChessBoard[3, 3] = "Q";
+			if (C4->Visible == true) ChessBoard[3, 4] = "Q";
+			if (C5->Visible == true) ChessBoard[3, 5] = "Q";
+			if (C6->Visible == true) ChessBoard[3, 6] = "Q";
+			if (C7->Visible == true) ChessBoard[3, 7] = "Q";
+			if (C8->Visible == true) ChessBoard[3, 8] = "Q";
+
+			if (D1->Visible == true) ChessBoard[4, 1] = "Q";
+			if (D2->Visible == true) ChessBoard[4, 2] = "Q";
+			if (D3->Visible == true) ChessBoard[4, 3] = "Q";
+			if (D4->Visible == true) ChessBoard[4, 4] = "Q";
+			if (D5->Visible == true) ChessBoard[4, 5] = "Q";
+			if (D6->Visible == true) ChessBoard[4, 6] = "Q";
+			if (D7->Visible == true) ChessBoard[4, 7] = "Q";
+			if (D8->Visible == true) ChessBoard[4, 8] = "Q";
+
+			if (E1->Visible == true) ChessBoard[5, 1] = "Q";
+			if (E2->Visible == true) ChessBoard[5, 2] = "Q";
+			if (E3->Visible == true) ChessBoard[5, 3] = "Q";
+			if (E4->Visible == true) ChessBoard[5, 4] = "Q";
+			if (E5->Visible == true) ChessBoard[5, 5] = "Q";
+			if (E6->Visible == true) ChessBoard[5, 6] = "Q";
+			if (E7->Visible == true) ChessBoard[5, 7] = "Q";
+			if (E8->Visible == true) ChessBoard[5, 8] = "Q";
+
+			if (F1->Visible == true) ChessBoard[6, 1] = "Q";
+			if (F2->Visible == true) ChessBoard[6, 2] = "Q";
+			if (F3->Visible == true) ChessBoard[6, 3] = "Q";
+			if (F4->Visible == true) ChessBoard[6, 4] = "Q";
+			if (F5->Visible == true) ChessBoard[6, 5] = "Q";
+			if (F6->Visible == true) ChessBoard[6, 6] = "Q";
+			if (F7->Visible == true) ChessBoard[6, 7] = "Q";
+			if (F8->Visible == true) ChessBoard[6, 8] = "Q";
+
+			if (G1->Visible == true) ChessBoard[7, 1] = "Q";
+			if (G2->Visible == true) ChessBoard[7, 2] = "Q";
+			if (G3->Visible == true) ChessBoard[7, 3] = "Q";
+			if (G4->Visible == true) ChessBoard[7, 4] = "Q";
+			if (G5->Visible == true) ChessBoard[7, 5] = "Q";
+			if (G6->Visible == true) ChessBoard[7, 6] = "Q";
+			if (G7->Visible == true) ChessBoard[7, 7] = "Q";
+			if (G8->Visible == true) ChessBoard[7, 8] = "Q";
+
+			if (H1->Visible == true) ChessBoard[8, 1] = "Q";
+			if (H2->Visible == true) ChessBoard[8, 2] = "Q";
+			if (H3->Visible == true) ChessBoard[8, 3] = "Q";
+			if (H4->Visible == true) ChessBoard[8, 4] = "Q";
+			if (H5->Visible == true) ChessBoard[8, 5] = "Q";
+			if (H6->Visible == true) ChessBoard[8, 6] = "Q";
+			if (H7->Visible == true) ChessBoard[8, 7] = "Q";
+			if (H8->Visible == true) ChessBoard[8, 8] = "Q";
+		}
+
+		// assignment of "q" to ChessBoard fields fired by queens - queens' "stars"
+
+		for (char xi = 1; xi < 9; xi++)
+		{
+			for (char yj = 1; yj < 9; yj++)
+			{
+				if (ChessBoard[xi, yj] == "Q")
+				{
+					qXshift = xi, qYshift = yj;
+					queenposition(qXshift, qYshift, ChessBoard);
+				}
+			}
+
+		}
 
 
+		return !(ChessBoard[CurrentQX, CurrentQY] == "q" || ChessBoard[CurrentQX, CurrentQY] == "Q");
 
+
+	}
+
+		   //remove queen
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		//create array for indexing queens
+		array<array<PictureBox^>^>^ chesslist = gcnew array<array<PictureBox^>^>{
+			gcnew array<PictureBox^>{A8, A7, A6, A5, A4, A3, A2, A1},
+				gcnew array<PictureBox^>{B8, B7, B6, B5, B4, B3, B2, B1},
+				gcnew array<PictureBox^>{C8, C7, C6, C5, C4, C3, C2, C1},
+				gcnew array<PictureBox^>{D8, D7, D6, D5, D4, D3, D2, D1},
+				gcnew array<PictureBox^>{E8, E7, E6, E5, E4, E3, E2, E1},
+				gcnew array<PictureBox^>{F8, F7, F6, F5, F4, F3, F2, F1},
+				gcnew array<PictureBox^>{G8, G7, G6, G5, G4, G3, G2, G1},
+				gcnew array<PictureBox^>{H8, H7, H6, H5, H4, H3, H2, H1}
+		};
+
+		//get input
+		String^ queenINPUT = (textBox1->Text)->ToUpper();
+
+		//check valid input with regex
+		if (!Regex::Match(queenINPUT, "[A-H][1-8]")->Success)
+		{
+			MessageBox::Show("INPUT ACCEPTIBLE RANGE is  A1....H8");
+			return;
+		}
+		int x = queenINPUT[0] - 'A';
+		int y = 8 - (queenINPUT[1] - '0');
+		if (chesslist[x][y]->Visible)
+		{
+			if (score >= 50)
+				score -= 50;
+			chesslist[x][y]->Visible = false;
+			numberOfQueens -= 1;
+			penalty++;
+			labelscore->Text = score + "";
+		}
+
+		ClearBullets();
+		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
+		fillChessboard(ChessBoard);
+		for (char xi = 1; xi < 9; xi++)
+		{
+			for (char yj = 1; yj < 9; yj++)
+			{
+				if (ChessBoard[xi, yj] == "Q")
+				{
+					queenposition(xi, yj, ChessBoard);
+				}
+			}
+		}
+		ShowBullets(ChessBoard);
+	}
+
+		   //return true if current score in highscores
+		   bool in_highscore() {
+			   if (score == 0)
+				   return false;
+			   int score_amount = 0;
+			   array<ScoreEntry^>^ scorelist = gcnew array<ScoreEntry^>(11);
+			   read_scores(score_amount, scorelist);
+			   return (score_amount < 10 || (score_amount == 10 && score > scorelist[9]->score));
+		   }
+
+
+		   //add score to score board
+		   System::Void add_score(String^ message)
+		   {
+			   int score_amount = 0;
+
+			   array<ScoreEntry^>^ scorelist = gcnew array<ScoreEntry^>(11);
+			   read_scores(score_amount, scorelist);
+			   if (score_amount < 10 || (score_amount == 10 && score > scorelist[9]->score))
+			   {
+				   auto time = (timer->ElapsedMilliseconds) / 1000;
+				   DateTime date = DateTime::Now;
+				   oudaAssignment2::enterScore enter(message, penalty, date.ToString("yyyy/MM/dd"), numberOfQueens, time, score, scorelist, score_amount);
+				   enter.ShowDialog();
+			   }
+
+		   }
+		   //reads in scores into array and, returns array lengh by reference
+		   System::Void read_scores(int& amount, array<ScoreEntry^>^& scorelist)
+		   {
+			   try {
+				   array<String^>^ words;
+				   String^ line;
+				   String^ delimStr = "|";
+				   array<Char>^ delimiter = delimStr->ToCharArray();
+				   StreamReader^ infile = File::OpenText("score_list.txt");
+				   for (; ((line = infile->ReadLine()) != nullptr) && amount < 10;
+					   amount++)
+				   {
+					   words = line->Split(delimiter);
+					   String^ name = words[0];
+					   String^ date = words[1];
+					   UInt32 queens = Convert::ToUInt32(words[2]);
+					   Int32 time = Convert::ToInt32(words[3]); //in seconds
+					   Int32 score = Convert::ToInt32(words[4]);
+					   scorelist[amount] = (gcnew ScoreEntry(name, date, queens, time, score));
+				   }
+				   infile->Close();
+
+			   }
+			   catch (Exception^ e) {
+				   MessageBox::Show("Error Reading file");
+			   }
+		   }
+
+		   //exit game button
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		timer->Stop();
+		if (in_highscore())
+			add_score("!!! Why ??? Game will exit ");
+		clearboard();
+		this->Close();
+	}
+		   //clears board for new game
+		   System::Void clearboard()
+		   {
+			   {
+				   A1->Visible = false;		// remove queens from chessboard
+				   A2->Visible = false;		// remove queens from chessboard
+				   A3->Visible = false;		// remove queens from chessboard
+				   A4->Visible = false;		// remove queens from chessboard
+				   A5->Visible = false;		// remove queens from chessboard
+				   A6->Visible = false;		// remove queens from chessboard
+				   A7->Visible = false;		// remove queens from chessboard
+				   A8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   B1->Visible = false;		// remove queens from chessboard
+				   B2->Visible = false;		// remove queens from chessboard
+				   B3->Visible = false;		// remove queens from chessboard
+				   B4->Visible = false;		// remove queens from chessboard
+				   B5->Visible = false;		// remove queens from chessboard
+				   B6->Visible = false;		// remove queens from chessboard
+				   B7->Visible = false;		// remove queens from chessboard
+				   B8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   C1->Visible = false;		// remove queens from chessboard
+				   C2->Visible = false;		// remove queens from chessboard
+				   C3->Visible = false;		// remove queens from chessboard
+				   C4->Visible = false;		// remove queens from chessboard
+				   C5->Visible = false;		// remove queens from chessboard
+				   C6->Visible = false;		// remove queens from chessboard
+				   C7->Visible = false;		// remove queens from chessboard
+				   C8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   D1->Visible = false;		// remove queens from chessboard
+				   D2->Visible = false;		// remove queens from chessboard
+				   D3->Visible = false;		// remove queens from chessboard
+				   D4->Visible = false;		// remove queens from chessboard
+				   D5->Visible = false;		// remove queens from chessboard
+				   D6->Visible = false;		// remove queens from chessboard
+				   D7->Visible = false;		// remove queens from chessboard
+				   D8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   E1->Visible = false;		// remove queens from chessboard
+				   E2->Visible = false;		// remove queens from chessboard
+				   E3->Visible = false;		// remove queens from chessboard
+				   E4->Visible = false;		// remove queens from chessboard
+				   E5->Visible = false;		// remove queens from chessboard
+				   E6->Visible = false;		// remove queens from chessboard
+				   E7->Visible = false;		// remove queens from chessboard
+				   E8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   F1->Visible = false;		// remove queens from chessboard
+				   F2->Visible = false;		// remove queens from chessboard
+				   F3->Visible = false;		// remove queens from chessboard
+				   F4->Visible = false;		// remove queens from chessboard
+				   F5->Visible = false;		// remove queens from chessboard
+				   F6->Visible = false;		// remove queens from chessboard
+				   F7->Visible = false;		// remove queens from chessboard
+				   F8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   G1->Visible = false;		// remove queens from chessboard
+				   G2->Visible = false;		// remove queens from chessboard
+				   G3->Visible = false;		// remove queens from chessboard
+				   G4->Visible = false;		// remove queens from chessboard
+				   G5->Visible = false;		// remove queens from chessboard
+				   G6->Visible = false;		// remove queens from chessboard
+				   G7->Visible = false;		// remove queens from chessboard
+				   G8->Visible = false;		// remove queens from chessboard
+				   // remove queens from chessboard
+				   H1->Visible = false;		// remove queens from chessboard
+				   H2->Visible = false;		// remove queens from chessboard
+				   H3->Visible = false;		// remove queens from chessboard
+				   H4->Visible = false;		// remove queens from chessboard
+				   H5->Visible = false;		// remove queens from chessboard
+				   H6->Visible = false;		// remove queens from chessboard
+				   H7->Visible = false;		// remove queens from chessboard
+				   H8->Visible = false;		// remove queens from chessboard
+			   }
+			   smile->Visible = false;		// remove smile
+			   frown->Visible = false;		// remove frown
+
+			   numberOfQueens = 0;         //set up number of safe queens to 0
+			   score = 0;
+			   penalty = 0;
+			   labelscore->Text = score + "";
+			   timer = Stopwatch::StartNew();
+			   ClearBullets();
+		   }
 	};
+
+
+
 }
+

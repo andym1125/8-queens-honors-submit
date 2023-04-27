@@ -1,11 +1,7 @@
-
-
 #pragma once
-
-
-#include "oudaStart.h"
 #include "chessBoard.h"
-#include "LeaderBoard.h"
+#include "leaderBoard.h"
+#include "enterScore.h"
 
 namespace oudaAssignment2 {
 
@@ -17,7 +13,7 @@ namespace oudaAssignment2 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for oudaStart
+	/// Summary for menu
 	/// </summary>
 	public ref class oudaStart : public System::Windows::Forms::Form
 	{
@@ -41,10 +37,10 @@ namespace oudaAssignment2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ gameStartButton;
+	private: System::Windows::Forms::Button^  button1;
 	protected:
-	private: System::Windows::Forms::Button^ leaderBoardButton;
-	private: System::Windows::Forms::Button^ exitButton;
+	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  button3;
 
 	private:
 		/// <summary>
@@ -59,56 +55,56 @@ namespace oudaAssignment2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(oudaStart::typeid));
-			this->gameStartButton = (gcnew System::Windows::Forms::Button());
-			this->leaderBoardButton = (gcnew System::Windows::Forms::Button());
-			this->exitButton = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(oudaStart::typeid));
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// gameStartButton
+			// button1
 			// 
-			this->gameStartButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gameStartButton->Location = System::Drawing::Point(71, 46);
-			this->gameStartButton->Name = L"gameStartButton";
-			this->gameStartButton->Size = System::Drawing::Size(255, 64);
-			this->gameStartButton->TabIndex = 0;
-			this->gameStartButton->Text = L"8-Queen Game";
-			this->gameStartButton->UseVisualStyleBackColor = true;
-			this->gameStartButton->Click += gcnew System::EventHandler(this, &oudaStart::gameStartButton_Click);
+			this->button1->Location = System::Drawing::Point(52, 34);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(186, 46);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"8-Queens Game";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &oudaStart::button1_Click);
 			// 
-			// leaderBoardButton
+			// button2
 			// 
-			this->leaderBoardButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->leaderBoardButton->Location = System::Drawing::Point(69, 121);
-			this->leaderBoardButton->Name = L"leaderBoardButton";
-			this->leaderBoardButton->Size = System::Drawing::Size(255, 64);
-			this->leaderBoardButton->TabIndex = 1;
-			this->leaderBoardButton->Text = L"Leader Board";
-			this->leaderBoardButton->UseVisualStyleBackColor = true;
-			this->leaderBoardButton->Click += gcnew System::EventHandler(this, &oudaStart::leaderBoardButton_Click);
+			this->button2->Location = System::Drawing::Point(52, 86);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(186, 49);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"Leader Board";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &oudaStart::button2_Click);
 			// 
-			// exitButton
+			// button3
 			// 
-			this->exitButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->exitButton->Location = System::Drawing::Point(71, 231);
-			this->exitButton->Name = L"exitButton";
-			this->exitButton->Size = System::Drawing::Size(255, 64);
-			this->exitButton->TabIndex = 2;
-			this->exitButton->Text = L"Exit";
-			this->exitButton->UseVisualStyleBackColor = true;
-			this->exitButton->Click += gcnew System::EventHandler(this, &oudaStart::exitButton_Click);
+			this->button3->Location = System::Drawing::Point(52, 173);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(185, 58);
+			this->button3->TabIndex = 2;
+			this->button3->Text = L"Exit";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &oudaStart::button3_Click);
 			// 
 			// oudaStart
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(397, 338);
-			this->Controls->Add(this->exitButton);
-			this->Controls->Add(this->leaderBoardButton);
-			this->Controls->Add(this->gameStartButton);
+			this->ClientSize = System::Drawing::Size(288, 278);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"oudaStart";
 			this->Text = L"oudaStart";
@@ -116,47 +112,16 @@ namespace oudaAssignment2 {
 
 		}
 #pragma endregion
-
-
-
-
-	private: System::Void gameStartButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		chessBoard^ form = gcnew chessBoard;
-		try {
-			form->ShowDialog();
-		}
-		catch (Exception^ e)
-		{
-			// do nothing
-		}
-
-
-
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+		Application::Exit();
 	}
-
-
-	private: System::Void leaderBoardButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		leaderBoard^ form = gcnew leaderBoard;
-		try {
-			form->ShowDialog();
-		}
-		catch (Exception^ e)
-		{
-			// do nothing
-		}
-
-
-
-
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		oudaAssignment2::chessBoard chess_form;
+		chess_form.ShowDialog();
 	}
-	private: System::Void exitButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		this->Close();
-
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		oudaAssignment2::leaderBoard score_form;
+		score_form.ShowDialog();
 	}
-
-
-	};
+};
 }

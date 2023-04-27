@@ -15,36 +15,44 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="oudaStart.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="chessBoard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="leaderBoard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="oudaStart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="score.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enterScore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="chessBoard.resx">
+      <Filter>Header Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oudaStart.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="leaderBoard.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enterScore.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="score_list.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="oudaStart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="chessBoard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="oudaMain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="leaderBoard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="oudaStart.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="chessBoard.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

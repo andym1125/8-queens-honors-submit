@@ -18,13 +18,54 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="oudaStart.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chessBoard.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="enterScore.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="leaderBoard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="oudaStart.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="score.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="chessBoard.resx" />
+    <EmbeddedResource Include="oudaStart.resx">
+      <DependentUpon>oudaStart.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enterScore.resx">
+      <DependentUpon>enterScore.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="leaderBoard.resx">
+      <DependentUpon>leaderBoard.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="score_list.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{B6646618-6DDE-45C6-9EF9-EE92C3907968}</ProjectGuid>
+    <ProjectGuid>{23105459-6401-4B4A-96D2-83C72D6E8DEC}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>oudaAssignment2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>oudaAssignment2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -125,41 +166,6 @@
       <AdditionalDependencies />
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="chessBoard.cpp" />
-    <ClCompile Include="leaderBoard.cpp" />
-    <ClCompile Include="oudaMain.cpp" />
-    <ClCompile Include="oudaStart.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="chessBoard.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="leaderBoard.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="oudaStart.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="chessBoard.resx">
-      <DependentUpon>chessBoard.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="leaderBoard.resx">
-      <DependentUpon>leaderBoard.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="oudaStart.resx">
-      <DependentUpon>oudaStart.h</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
