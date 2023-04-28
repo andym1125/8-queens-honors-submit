@@ -2,6 +2,7 @@
 #include"score.h"
 #include "enterScore.h"
 #include <iostream>
+#include <vector>
 namespace oudaAssignment2 {
 
 	using namespace System;
@@ -274,8 +275,9 @@ namespace oudaAssignment2 {
 
 
 	private: System::ComponentModel::IContainer^ components;
-private: System::Windows::Forms::CheckBox^ hint;
-private: System::Windows::Forms::CheckBox^ help;
+	private: System::Windows::Forms::CheckBox^ hint;
+	private: System::Windows::Forms::CheckBox^ help;
+private: System::Windows::Forms::Label^ helplabel;
 
 
 
@@ -444,6 +446,7 @@ private: System::Windows::Forms::CheckBox^ help;
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->hint = (gcnew System::Windows::Forms::CheckBox());
 			this->help = (gcnew System::Windows::Forms::CheckBox());
+			this->helplabel = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->frown))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->A8))->BeginInit();
@@ -2617,16 +2620,26 @@ private: System::Windows::Forms::CheckBox^ help;
 			this->help->AutoSize = true;
 			this->help->Location = System::Drawing::Point(558, 443);
 			this->help->Name = L"help";
-			this->help->Size = System::Drawing::Size(46, 17);
+			this->help->Size = System::Drawing::Size(58, 17);
 			this->help->TabIndex = 391;
-			this->help->Text = L"help";
+			this->help->Text = L"help ->";
 			this->help->UseVisualStyleBackColor = true;
+			// 
+			// helplabel
+			// 
+			this->helplabel->AutoSize = true;
+			this->helplabel->Location = System::Drawing::Point(608, 444);
+			this->helplabel->Name = L"helplabel";
+			this->helplabel->Size = System::Drawing::Size(104, 13);
+			this->helplabel->TabIndex = 392;
+			this->helplabel->Text = L"92 possible solutions";
 			// 
 			// chessBoard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(710, 575);
+			this->Controls->Add(this->helplabel);
 			this->Controls->Add(this->help);
 			this->Controls->Add(this->hint);
 			this->Controls->Add(this->h1r);
@@ -2923,6 +2936,7 @@ private: System::Windows::Forms::CheckBox^ help;
 		  //time
 		  Diagnostics::Stopwatch^ timer;
 		  Int32 sec;
+		  int solutions = 92;
 
 	private: virtual System::Void EnterQueen_Click(System::Object^ sender, System::EventArgs^ e) sealed {
 
@@ -2937,7 +2951,7 @@ private: System::Windows::Forms::CheckBox^ help;
 		PictureBox^ queenBox = ShowQueens(QUEENinput);
 		if (queenBox == Empty)
 			return;
-		
+
 
 		fillChessboard(ChessBoard);
 		for (char xi = 1; xi < 9; xi++)
@@ -2975,12 +2989,10 @@ private: System::Windows::Forms::CheckBox^ help;
 			if (QUEENinput->Substring(1, 1) == "8") CurrentQY = 8;
 		}
 
-		
 
 		//making "frown" if queen's position is bad or "smile" if  queen's position is good
 		if (ChessBoard[CurrentQX, CurrentQY] == "q" || ChessBoard[CurrentQX, CurrentQY] == "Q")
 		{
-
 			System::Media::SoundPlayer^ simpleSound = gcnew
 				System::Media::SoundPlayer("c:\\windows\\media\\ringout.wav");
 			simpleSound->Play();
@@ -3000,7 +3012,7 @@ private: System::Windows::Forms::CheckBox^ help;
 			smile->Visible = true;
 			numberOfQueens = numberOfQueens + 1;
 			//making queens' pictures visible
-			
+
 			{
 				if (A1->Name == QUEENinput)  A1->Visible = true;
 				else if (A2->Name == QUEENinput)  A2->Visible = true;
@@ -3071,12 +3083,15 @@ private: System::Windows::Forms::CheckBox^ help;
 
 			congrat(numberOfQueens);
 		}
+
 		ClearBullets();
 		queenBox->Visible = true;
 		ChessBoard[CurrentQX, CurrentQY] = "Q";
 		ShowQueens(QUEENinput);
 		queenposition(CurrentQX, CurrentQY, ChessBoard);
 		ShowBullets(ChessBoard);
+		helplabel->Text = checkPossibleSolutions() + " possible solutions";
+
 	}
 
 
@@ -3175,6 +3190,8 @@ private: System::Windows::Forms::CheckBox^ help;
 		score = 0;
 		penalty = 0;
 		timer = Stopwatch::StartNew();
+		helplabel->Text = 92 + " possible solutions";
+
 
 		clearboard();
 	}
@@ -3541,6 +3558,189 @@ private: System::Windows::Forms::CheckBox^ help;
 			   return 0;
 		   }
 
+		   std::vector<std::vector<int>> solveNQueens() {
+			   std::vector<std::vector<int>> solutions;
+			   for (int c0 = 0; c0 < 8; c0++)
+			   {
+				   for (int c1 = 0; c1 < 8; c1++)
+				   {
+					   if (c1 == c0 ||
+						   c1 + 1 == c0 ||
+						   1 - c1 == -c0)
+						   continue;
+					   for (int c2 = 0; c2 < 8; c2++)
+					   {
+						   if (c2 == c1 || c2 == c0 ||
+							   c2 + 2 == c1 + 1 || c2 + 2 == c0 ||
+							   2 - c2 == 1 - c1 || 2 - c2 == -c0)
+							   continue;
+						   for (int c3 = 0; c3 < 8; c3++)
+						   {
+							   if (c3 == c2 || c3 == c1 || c3 == c0 ||
+								   c3 + 3 == c2 + 2 || c3 + 3 == c1 + 1 || c3 + 3 == c0 ||
+								   3 - c3 == 2 - c2 || 3 - c3 == 1 - c1 || 3 - c3 == -c0)
+								   continue;
+							   for (int c4 = 0; c4 < 8; c4++)
+							   {
+								   if (c4 == c3 || c4 == c2 || c4 == c1 || c4 == c0 ||
+									   c4 + 4 == c3 + 3 || c4 + 4 == c2 + 2 || c4 + 4 == c1 + 1 || c4 + 4 == c0 ||
+									   4 - c4 == 3 - c3 || 4 - c4 == 2 - c2 || 4 - c4 == 1 - c1 || 4 - c4 == -c0)
+									   continue;
+								   for (int c5 = 0; c5 < 8; c5++)
+								   {
+									   if (c5 == c4 || c5 == c3 || c5 == c2 || c5 == c1 || c5 == c0 ||
+										   c5 + 5 == c4 + 4 || c5 + 5 == c3 + 3 || c5 + 5 == c2 + 2 || c5 + 5 == c1 + 1 || c5 + 5 == c0 ||
+										   5 - c5 == 4 - c4 || 5 - c5 == 3 - c3 || 5 - c5 == 2 - c2 || 5 - c5 == 1 - c1 || 5 - c5 == -c0)
+										   continue;
+									   for (int c6 = 0; c6 < 8; c6++)
+									   {
+										   if (c6 == c5 || c6 == c4 || c6 == c3 || c6 == c2 || c6 == c1 || c6 == c0 ||
+											   c6 + 6 == c5 + 5 || c6 + 6 == c4 + 4 || c6 + 6 == c3 + 3 || c6 + 6 == c2 + 2 || c6 + 6 == c1 + 1 || c6 + 6 == c0 ||
+											   6 - c6 == 5 - c5 || 6 - c6 == 4 - c4 || 6 - c6 == 3 - c3 || 6 - c6 == 2 - c2 || 6 - c6 == 1 - c1 || 6 - c6 == -c0)
+											   continue;
+										   // printChoices(std::vector<int>({c0, c1, c2, c3, c4, c5, c6}));
+
+										   for (int c7 = 0; c7 < 8; c7++)
+										   {
+											   if (c7 == c6 || c7 == c5 || c7 == c4 || c7 == c3 || c7 == c2 || c7 == c1 || c7 == c0 ||
+												   c7 + 7 == c6 + 6 || c7 + 7 == c5 + 5 || c7 + 7 == c4 + 4 || c7 + 7 == c3 + 3 || c7 + 7 == c2 + 2 || c7 + 7 == c1 + 1 || c7 + 7 == c0 ||
+												   7 - c7 == 6 - c6 || 7 - c7 == 5 - c5 || 7 - c7 == 4 - c4 || 7 - c7 == 3 - c3 || 7 - c7 == 2 - c2 || 7 - c7 == 1 - c1 || 7 - c7 == -c0)
+												   continue;
+											   // printChoices(std::vector<int>({c0, c1, c2, c3, c4, c5, c6, c7}));
+											   solutions.push_back(std::vector<int>({ c0, c1, c2, c3, c4, c5, c6, c7 }));
+											   // sum++;
+										   }
+									   }
+								   }
+							   }
+						   }
+					   }
+				   }
+			   }
+			   return solutions;
+		   }
+
+		   //Assumes there's no 
+		   std::vector<int> vectorizeBoard() {
+			   std::vector<int> ret;
+
+			   if      (A1->Visible) ret.push_back(0);
+			   else if (B1->Visible) ret.push_back(1);
+			   else if (C1->Visible) ret.push_back(2);
+			   else if (D1->Visible) ret.push_back(3);
+			   else if (E1->Visible) ret.push_back(4);
+			   else if (F1->Visible) ret.push_back(5);
+			   else if (G1->Visible) ret.push_back(6);
+			   else if (H1->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+
+			   if      (A2->Visible) ret.push_back(0);
+			   else if (B2->Visible) ret.push_back(1);
+			   else if (C2->Visible) ret.push_back(2);
+			   else if (D2->Visible) ret.push_back(3);
+			   else if (E2->Visible) ret.push_back(4);
+			   else if (F2->Visible) ret.push_back(5);
+			   else if (G2->Visible) ret.push_back(6);
+			   else if (H2->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+			   if      (A3->Visible) ret.push_back(0);
+			   else if (B3->Visible) ret.push_back(1);
+			   else if (C3->Visible) ret.push_back(2);
+			   else if (D3->Visible) ret.push_back(3);
+			   else if (E3->Visible) ret.push_back(4);
+			   else if (F3->Visible) ret.push_back(5);
+			   else if (G3->Visible) ret.push_back(6);
+			   else if (H3->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+			   if      (A4->Visible) ret.push_back(0);
+			   else if (B4->Visible) ret.push_back(1);
+			   else if (C4->Visible) ret.push_back(2);
+			   else if (D4->Visible) ret.push_back(3);
+			   else if (E4->Visible) ret.push_back(4);
+			   else if (F4->Visible) ret.push_back(5);
+			   else if (G4->Visible) ret.push_back(6);
+			   else if (H4->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+			   if      (A5->Visible) ret.push_back(0);
+			   else if (B5->Visible) ret.push_back(1);
+			   else if (C5->Visible) ret.push_back(2);
+			   else if (D5->Visible) ret.push_back(3);
+			   else if (E5->Visible) ret.push_back(4);
+			   else if (F5->Visible) ret.push_back(5);
+			   else if (G5->Visible) ret.push_back(6);
+			   else if (H5->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+			   if      (A6->Visible) ret.push_back(0);
+			   else if (B6->Visible) ret.push_back(1);
+			   else if (C6->Visible) ret.push_back(2);
+			   else if (D6->Visible) ret.push_back(3);
+			   else if (E6->Visible) ret.push_back(4);
+			   else if (F6->Visible) ret.push_back(5);
+			   else if (G6->Visible) ret.push_back(6);
+			   else if (H6->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+			   if (A7->Visible) ret.push_back(0);
+			   else if (B7->Visible) ret.push_back(1);
+			   else if (C7->Visible) ret.push_back(2);
+			   else if (D7->Visible) ret.push_back(3);
+			   else if (E7->Visible) ret.push_back(4);
+			   else if (F7->Visible) ret.push_back(5);
+			   else if (G7->Visible) ret.push_back(6);
+			   else if (H7->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1);
+
+			   if      (A8->Visible) ret.push_back(0);
+			   else if (B8->Visible) ret.push_back(1);
+			   else if (C8->Visible) ret.push_back(2);
+			   else if (D8->Visible) ret.push_back(3);
+			   else if (E8->Visible) ret.push_back(4);
+			   else if (F8->Visible) ret.push_back(5);
+			   else if (G8->Visible) ret.push_back(6);
+			   else if (H8->Visible) ret.push_back(7);
+			   else				    ret.push_back(-1); 
+
+			   //error bit 1
+			   ret.push_back(2 <= (A1->Visible + B1->Visible + C1->Visible + D1->Visible + E1->Visible + F1->Visible + G1->Visible + H1->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A2->Visible + B2->Visible + C2->Visible + D2->Visible + E2->Visible + F2->Visible + G2->Visible + H2->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A3->Visible + B3->Visible + C3->Visible + D3->Visible + E3->Visible + F3->Visible + G3->Visible + H3->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A4->Visible + B4->Visible + C4->Visible + D4->Visible + E4->Visible + F4->Visible + G4->Visible + H4->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A5->Visible + B5->Visible + C5->Visible + D5->Visible + E5->Visible + F5->Visible + G5->Visible + H5->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A6->Visible + B6->Visible + C6->Visible + D6->Visible + E6->Visible + F6->Visible + G6->Visible + H6->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A7->Visible + B7->Visible + C7->Visible + D7->Visible + E7->Visible + F7->Visible + G7->Visible + H7->Visible));
+			   ret.at(8) = ret.at(8) | (2 <= (A8->Visible + B8->Visible + C8->Visible + D8->Visible + E8->Visible + F8->Visible + G8->Visible + H8->Visible));
+			   return ret;
+		   }
+
+		   int checkPossibleSolutions()
+		   {
+			   std::vector<int> board = vectorizeBoard();
+			   std::vector<std::vector<int>> solutions = solveNQueens();
+
+			   if (board.at(8))
+				   return 0;
+
+			   int sum = 0;
+			   for (int vi = 0; vi < solutions.size(); vi++)
+			   {
+				   std::vector<int> v = solutions.at(vi);
+				   bool match = true;
+				   for (int i = 0; i < 8 && match; i++)
+				   {
+					   if (board.at(i) != -1 && board.at(i) != v.at(i))
+						   match = false;
+				   }
+
+				   if (match)
+					   sum++;
+			   }
+			   return sum;
+		   }
 
 		   //double click to add queen		
 	private: System::Void pictureBox1_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
@@ -3723,6 +3923,7 @@ private: System::Windows::Forms::CheckBox^ help;
 			labelscore->Text = score + "";
 		}
 
+		helplabel->Text = checkPossibleSolutions() + " possible solutions";
 		ClearBullets();
 		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
 		fillChessboard(ChessBoard);
@@ -3888,23 +4089,24 @@ private: System::Windows::Forms::CheckBox^ help;
 			   timer = Stopwatch::StartNew();
 			   ClearBullets();
 		   }
-private: System::Void hint_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	ClearBullets();
-	array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
-	fillChessboard(ChessBoard);
-	for (char xi = 1; xi < 9; xi++)
-	{
-		for (char yj = 1; yj < 9; yj++)
+
+	private: System::Void hint_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		ClearBullets();
+		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
+		fillChessboard(ChessBoard);
+		for (char xi = 1; xi < 9; xi++)
 		{
-			if (ChessBoard[xi, yj] == "Q")
+			for (char yj = 1; yj < 9; yj++)
 			{
-				queenposition(xi, yj, ChessBoard);
+				if (ChessBoard[xi, yj] == "Q")
+				{
+					queenposition(xi, yj, ChessBoard);
+				}
 			}
 		}
+		ShowBullets(ChessBoard);
 	}
-	ShowBullets(ChessBoard);
-}
-};
+	};
 
 
 
