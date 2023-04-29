@@ -2624,15 +2624,15 @@ private: System::Windows::Forms::Label^ helplabel;
 			this->help->TabIndex = 391;
 			this->help->Text = L"help ->";
 			this->help->UseVisualStyleBackColor = true;
+			this->help->CheckedChanged += gcnew System::EventHandler(this, &chessBoard::help_CheckedChanged);
 			// 
 			// helplabel
 			// 
 			this->helplabel->AutoSize = true;
 			this->helplabel->Location = System::Drawing::Point(608, 444);
 			this->helplabel->Name = L"helplabel";
-			this->helplabel->Size = System::Drawing::Size(104, 13);
+			this->helplabel->Size = System::Drawing::Size(0, 13);
 			this->helplabel->TabIndex = 392;
-			this->helplabel->Text = L"92 possible solutions";
 			// 
 			// chessBoard
 			// 
@@ -3090,7 +3090,7 @@ private: System::Windows::Forms::Label^ helplabel;
 		ShowQueens(QUEENinput);
 		queenposition(CurrentQX, CurrentQY, ChessBoard);
 		ShowBullets(ChessBoard);
-		helplabel->Text = checkPossibleSolutions() + " possible solutions";
+		helplabel->Text = checkPossibleSolutions();
 
 	}
 
@@ -3717,13 +3717,16 @@ private: System::Windows::Forms::Label^ helplabel;
 			   return ret;
 		   }
 
-		   int checkPossibleSolutions()
+		   String^ checkPossibleSolutions()
 		   {
+			   if (!help->Checked)
+				   return "";
+
 			   std::vector<int> board = vectorizeBoard();
 			   std::vector<std::vector<int>> solutions = solveNQueens();
 
 			   if (board.at(8))
-				   return 0;
+				   return "No possible solutions";
 
 			   int sum = 0;
 			   for (int vi = 0; vi < solutions.size(); vi++)
@@ -3739,7 +3742,7 @@ private: System::Windows::Forms::Label^ helplabel;
 				   if (match)
 					   sum++;
 			   }
-			   return sum;
+			   return sum + " possible solutions";
 		   }
 
 		   //double click to add queen		
@@ -3923,7 +3926,7 @@ private: System::Windows::Forms::Label^ helplabel;
 			labelscore->Text = score + "";
 		}
 
-		helplabel->Text = checkPossibleSolutions() + " possible solutions";
+		helplabel->Text = checkPossibleSolutions();
 		ClearBullets();
 		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
 		fillChessboard(ChessBoard);
@@ -4106,7 +4109,24 @@ private: System::Windows::Forms::Label^ helplabel;
 		}
 		ShowBullets(ChessBoard);
 	}
-	};
+	private: System::Void help_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		ClearBullets();
+		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
+		fillChessboard(ChessBoard);
+		for (char xi = 1; xi < 9; xi++)
+		{
+			for (char yj = 1; yj < 9; yj++)
+			{
+				if (ChessBoard[xi, yj] == "Q")
+				{
+					queenposition(xi, yj, ChessBoard);
+				}
+			}
+		}
+		ShowBullets(ChessBoard);
+		helplabel->Text = checkPossibleSolutions();
+	}
+};
 
 
 
