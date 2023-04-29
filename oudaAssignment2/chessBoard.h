@@ -3487,11 +3487,11 @@ private: System::Windows::Forms::Label^ helplabel;
 		   //Congratulation message function
 		   void congrat(char QueenNumber) {
 			   //add to highscore if needed
-			   if (QueenNumber == 8 && in_highscore()) {
+			   if (won() && in_highscore()) {
 				   add_score(" Congratulations! All 8 queens are safe");
 				   clearboard();
 			   }
-			   else if (QueenNumber == 8) {
+			   else if (won()) {
 				   MessageBox::Show(" Congratulations! All 8 queens are safe");
 				   clearboard();
 			   }
@@ -4109,6 +4109,75 @@ private: System::Windows::Forms::Label^ helplabel;
 		}
 		ShowBullets(ChessBoard);
 	}
+		   bool won() {
+			   int sum = A1->Visible +
+				   A2->Visible +
+				   A3->Visible +
+				   A4->Visible +
+				   A5->Visible +
+				   A6->Visible +
+				   A7->Visible +
+				   A8->Visible +
+				   B1->Visible +
+				   B2->Visible +
+				   B3->Visible +
+				   B4->Visible +
+				   B5->Visible +
+				   B6->Visible +
+				   B7->Visible +
+				   B8->Visible +
+				   C1->Visible +
+				   C2->Visible +
+				   C3->Visible +
+				   C4->Visible +
+				   C5->Visible +
+				   C6->Visible +
+				   C7->Visible +
+				   C8->Visible +
+				   D1->Visible +
+				   D2->Visible +
+				   D3->Visible +
+				   D4->Visible +
+				   D5->Visible +
+				   D6->Visible +
+				   D7->Visible +
+				   D8->Visible +
+				   E1->Visible +
+				   E2->Visible +
+				   E3->Visible +
+				   E4->Visible +
+				   E5->Visible +
+				   E6->Visible +
+				   E7->Visible +
+				   E8->Visible +
+				   F1->Visible +
+				   F2->Visible +
+				   F3->Visible +
+				   F4->Visible +
+				   F5->Visible +
+				   F6->Visible +
+				   F7->Visible +
+				   F8->Visible +
+				   G1->Visible +
+				   G2->Visible +
+				   G3->Visible +
+				   G4->Visible +
+				   G5->Visible +
+				   G6->Visible +
+				   G7->Visible +
+				   G8->Visible +
+				   H1->Visible +
+				   H2->Visible +
+				   H3->Visible +
+				   H4->Visible +
+				   H5->Visible +
+				   H6->Visible +
+				   H7->Visible +
+				   H8->Visible;
+
+			   //System::String^ compare = "1 possible solutions";
+			   return sum == 8;//&& checkPossibleSolutions()->Equals(compare);
+		   }
 	private: System::Void help_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		ClearBullets();
 		array<String^, 2>^ ChessBoard = gcnew array<String^, 2>(10, 10);
